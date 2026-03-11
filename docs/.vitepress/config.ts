@@ -5,6 +5,30 @@ export default defineConfig({
   description: 'A powerful mobile remote IDE for developers',
   base: '/',
 
+  // Theme configuration
+  themeConfig: {
+    logo: '/logo.png',
+    
+    // Social links
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/nimotecode' },
+      { icon: 'twitter', link: 'https://twitter.com/nimotecode' },
+      { icon: 'discord', link: 'https://discord.gg/nimotecode' }
+    ],
+    
+    // Footer configuration
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024 NimoteCode'
+    },
+    
+    // Edit link configuration
+    editLink: {
+      pattern: 'https://github.com/nimotecode/nimote_issues/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
+    }
+  },
+
   locales: {
     root: {
       label: 'English',
@@ -12,9 +36,10 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Features', link: '/features' },
+          { text: 'Documentation', link: '/docs/quick-start' },
           { text: 'Support', link: '/support' },
           { text: 'Privacy', link: '/privacy' },
-          { text: 'Terms',   link: '/terms'   }
+          { text: 'Terms', link: '/terms' }
         ],
         sidebar: {
           '/': [
@@ -34,14 +59,7 @@ export default defineConfig({
                 { text: 'Terminal Usage', link: '/docs/terminal' },
                 { text: 'GitHub Integration', link: '/docs/github' },
                 { text: 'AI Assistant', link: '/docs/ai' },
-                { text: 'Git Version Control', link: '/docs/git' },
-                { text: 'Editor Features', link: '/docs/editor' }
-              ]
-            },
-            {
-              text: 'Configuration',
-              items: [
-                { text: 'Configuration Examples', link: '/docs/configuration' }
+                { text: 'Configuration', link: '/docs/configuration' }
               ]
             },
             {
@@ -52,6 +70,11 @@ export default defineConfig({
               ]
             }
           ]
+        },
+        
+        // Search configuration
+        search: {
+          provider: 'local'
         }
       }
     },
@@ -63,6 +86,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '功能', link: '/zh/features' },
+          { text: '文档', link: '/zh/docs/quick-start' },
           { text: '支持', link: '/zh/support' },
           { text: '隐私政策', link: '/zh/privacy' },
           { text: '服务条款', link: '/zh/terms' }
@@ -75,24 +99,17 @@ export default defineConfig({
                 { text: '快速入门', link: '/zh/docs/quick-start' },
                 { text: '简介', link: '/zh/introduction' },
                 { text: '功能特性', link: '/zh/features' },
-                { text: '下载安装', link: '/zh/download' }
+                { text: '下载', link: '/zh/download' }
               ]
             },
             {
-              text: '文档指南',
+              text: '文档',
               items: [
                 { text: 'SSH 远程开发', link: '/zh/docs/ssh' },
                 { text: '终端使用', link: '/zh/docs/terminal' },
                 { text: 'GitHub 集成', link: '/zh/docs/github' },
                 { text: 'AI 助手', link: '/zh/docs/ai' },
-                { text: 'Git 版本控制', link: '/zh/docs/git' },
-                { text: '编辑器功能', link: '/zh/docs/editor' }
-              ]
-            },
-            {
-              text: '配置',
-              items: [
-                { text: '配置示例', link: '/zh/docs/configuration' }
+                { text: '配置', link: '/zh/docs/configuration' }
               ]
             },
             {
@@ -103,30 +120,19 @@ export default defineConfig({
               ]
             }
           ]
+        },
+        
+        search: {
+          provider: 'local'
         }
       }
     }
   },
-
-  themeConfig: {
-    logo: '/logo.png',
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/nimotecode/nimote_issues' },
-      { icon: 'email', link: 'mailto:aoun.ma@foxmail.com' }
-    ],
-
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present NimoteCode'
-    },
-
-    search: {
-      provider: 'local'
-    },
-
-    outline: {
-      level: [2, 3]
-    }
+  
+  // Build configuration
+  build: {
+    outDir: './dist',
+    assetsDir: './assets',
+    emptyOutDir: true
   }
 })
