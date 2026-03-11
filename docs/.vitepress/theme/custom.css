@@ -1,0 +1,144 @@
+:root {
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #828dff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #434ae8;
+  
+  --nimote-primary: #646cff;
+  --nimote-gradient: linear-gradient(135deg, #646cff 0%, #747bff 100%);
+}
+
+/* Hero Section Enhancements */
+.VPHero {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.VPHome {
+  padding-bottom: 4rem;
+}
+
+/* Feature Cards */
+.VPFeatures {
+  padding-bottom: 4rem;
+}
+
+.VPFeature {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(100, 108, 255, 0.15);
+}
+
+.VPFeature .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
+.VPNavBar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.VPNavBar .title {
+  font-weight: 700;
+  background: var(--nimote-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Buttons */
+.VPButton {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.VPButton.brand {
+  background: var(--nimote-gradient);
+  border: none;
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+}
+
+.VPButton.alt {
+  border: 2px solid var(--nimote-primary);
+  color: var(--nimote-primary);
+}
+
+.VPButton.alt:hover {
+  background: var(--nimote-primary);
+  color: white;
+}
+
+/* Footer */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 2rem;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .VPHero {
+    padding-top: 2rem;
+  }
+  
+  .VPFeatures {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Code Block Styling */
+.custom-code-block {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-brand-soft);
+  margin: 1rem 0;
+}
+
+.custom-code-block pre {
+  margin: 0;
+}
+
+.custom-code-block code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+/* Link Styling */
+.custom-link {
+  color: var(--nimote-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+  color: var(--vp-c-brand-light);
+  text-decoration: underline;
+}

@@ -1,94 +1,187 @@
-
 # Terms of Service
 
-**Effective Date and Last Updated:** February 25, 2026
+**Terms of Service for NimoteCode**
 
-Please read these Terms of Service ("Terms") carefully before downloading, installing, registering, or using the NimoteCode mobile application (the "App" or "Service") provided by NimoteCode ("we", "us", "our", or "the Company").
+Last Updated: March 5, 2026
 
-These Terms form a legally binding agreement between you and the Company. By accessing or using the Service in any way, you agree to be bound by these Terms. If you do not agree, you must not use the App.
+Welcome to NimoteCode! These Terms of Service ("Terms") govern your use of the NimoteCode application and related services. By accessing or using our services, you agree to be bound by these Terms.
 
-## 1. Eligibility
+## 1. Acceptance of Terms
 
-You must be at least 13 years old (or the minimum age required in your jurisdiction) to use the Service. By using the App, you represent that you meet this requirement and have the legal capacity to enter into these Terms.
+By accessing or using NimoteCode ("the App"), you agree to comply with these Terms and all applicable laws. If you disagree with any part of these terms, you may not use our services.
 
-## 2. Account and Security
+## 2. Description of Services
 
-- You are responsible for creating and maintaining accurate account information via Firebase Authentication.
-- You must keep your login credentials confidential and not share your account.
-- You are fully responsible for all activities under your account.
-- Notify us immediately of any unauthorized use at aoun.ma@foxmail.com.
+NimoteCode provides:
+- Mobile remote IDE functionality
+- SSH remote development capabilities
+- Terminal access and management
+- GitHub integration
+- AI-powered code assistance
+- Git version control features
 
-## 3. License Grant
+## 3. User Accounts
 
-Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to download, install, and use the App solely for your personal and/or professional software development purposes on supported devices.
+### Account Creation
+- You must be 13 years or older to use our services
+- You are responsible for maintaining the security of your account
+- You must provide accurate and complete information
 
-## 4. Free and Paid Features
+### Account Security
+- You are responsible for all activities under your account
+- Notify us immediately of any unauthorized access
+- Keep your credentials confidential
 
-- **Free Tier**: Includes core features such as single SSH session, SFTP file management, syntax highlighting, terminal support, basic AI assistance (user-configured models), GitHub repository browsing, adaptive UI, and themes.
-- **Paid Subscriptions**: Unlock advanced features including multiple concurrent SSH sessions, global/symbol search, Git visualization (status, history, blame, line-level tracking), code outline navigation, and priority support. Subscriptions are managed via RevenueCat in conjunction with Apple App Store or Google Play.
-- Subscriptions are auto-renewing and managed exclusively through Apple App Store or Google Play.
-- Pricing, features, and trial periods may change with notice.
+## 4. Subscriptions & Payments
 
-## 5. User Conduct and Restrictions
+### Free Tier
+- Basic IDE functionality
+- SSH remote development
+- Terminal access
+- GitHub integration
 
-You agree **not** to:
-- Use the Service to access any system, network, or data without proper authorization.
-- Attempt to reverse-engineer, decompile, disassemble, or extract source code from the App.
-- Introduce viruses, malware, or harmful code.
-- Interfere with the Service's operation or other users.
-- Use the Service for illegal purposes or in violation of third-party rights.
-- Circumvent subscription restrictions or payment mechanisms.
+### Professional Tier
+- All Free tier features
+- Full Git version control
+- Enhanced AI capabilities
+- Cloud synchronization
+- Priority support
 
-## 6. Remote Access, SSH/SFTP, and AI Features
+### Payment Terms
+- Subscriptions are billed in advance
+- Payments processed through App Store/Google Play
+- RevenueCat handles subscription management
+- Automatic renewal unless cancelled
 
-- All SSH/SFTP connections are established **directly** from your device to the remote server using credentials you provide and store locally. We do **not** act as a proxy, intermediary, or host for your connections.
-- We do **not** access, log, store, or have visibility into commands executed, files transferred, or code edited on remote servers.
-- AI assistance requires you to configure external models/APIs (third-party or local). All interactions (prompts, code context, responses) occur **directly** between your device and the chosen AI provider. We do **not** receive, store, or process this data.
-- You are solely responsible for securing your remote servers, complying with third-party AI provider terms, and ensuring you have authorization to access any systems.
+### Cancellation
+- Cancel anytime through app store settings
+- Access continues until end of billing period
+- No refunds for partial periods
 
-## 7. Intellectual Property
+## 5. Intellectual Property
 
-The App (including code, design, graphics, trademarks, Tree-sitter integrations, Rust backend components, and Flutter UI) is owned by us or our licensors. You receive no ownership rights beyond the limited license above. GitHub browsing respects repository owners' rights — you may not misuse or redistribute content without permission.
+### Ownership
+- All rights, title, and interest remain with NimoteCode
+- You retain ownership of your code and content
+- Licenses granted are non-exclusive and revocable
 
-## 8. Payments, Subscriptions, and Refunds
+### License Grant
+We grant you a limited, non-exclusive, non-transferable license to use the App for personal or commercial purposes, subject to these Terms.
 
-- All purchases and subscriptions are final and non-refundable except as required by law or platform policy (e.g., Apple/Google refund windows).
-- Subscriptions auto-renew until canceled at least 24 hours before the renewal date, managed via RevenueCat.
-- We may offer promotional trials — standard Terms apply during trials.
-- Pricing changes will be notified in advance.
+### Restrictions
+You agree not to:
+- Reverse engineer the App
+- Modify or distribute the App
+- Use the App for illegal purposes
+- Interfere with App functionality
 
-## 9. Disclaimer of Warranties
+## 6. User Content
 
-THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE ERROR-FREE, SECURE, UNINTERRUPTED, OR THAT DEFECTS WILL BE CORRECTED.
+### Content Ownership
+You retain all rights to your code, configurations, and content.
+
+### User Responsibility
+You are responsible for:
+- Content you upload or create
+- Compliance with applicable laws
+- Obtaining necessary permissions
+
+### License to Us
+You grant us a limited license to use your content solely for providing and improving our services.
+
+## 7. Privacy
+
+Your privacy is important to us. Please review our [Privacy Policy](/privacy) which explains how we collect, use, and protect your data.
+
+## 8. Third-Party Services
+
+### SSH Connections
+- You are responsible for server access permissions
+- We don't control remote servers
+- You must comply with server terms of service
+
+### GitHub Integration
+- GitHub's Terms apply to your use of their API
+- You must comply with GitHub's Terms of Service
+- Rate limits apply to API usage
+
+### AI Providers
+- AI responses are provided "as is"
+- You are responsible for AI output usage
+- AI may have separate terms of service
+
+## 9. Warranty Disclaimer
+
+THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
 
 ## 10. Limitation of Liability
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES (INCLUDING LOSS OF PROFITS, DATA, GOODWILL, OR BUSINESS INTERRUPTION), EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE 12 MONTHS PRECEDING THE CLAIM.
+To the maximum extent permitted by law:
+- We are not liable for any indirect, incidental, or consequential damages
+- Our total liability is limited to the amount you paid
+- We are not liable for service interruptions
+- We are not liable for third-party service failures
 
 ## 11. Termination
 
-We may suspend or terminate your access at any time for violation of these Terms, non-payment, or any other reason, with or without notice.
+### By You
+You may stop using the App at any time.
 
-## 12. Governing Law and Dispute Resolution
+### By Us
+We may terminate or suspend your account if you:
+- Violate these Terms
+- Provide false information
+- Engage in prohibited activities
 
-These Terms are governed by the laws of [Singapore / State of California / your chosen jurisdiction], excluding conflict of laws rules.  
-Any disputes shall be resolved exclusively through binding arbitration in [location] under [e.g., Singapore International Arbitration Centre / AAA] rules, or in courts of [location] if arbitration is unenforceable.
+### Effect of Termination
+- All licenses terminate
+- You must delete the App
+- Provisions survive termination
 
-## 13. Changes to Terms
+## 12. Changes to Terms
 
-We may modify these Terms. We will provide notice of material changes (in-app, email, or App Store). Continued use constitutes acceptance.
+We may modify these Terms from time to time. Continued use after changes constitutes acceptance of the new terms.
 
-## 14. Miscellaneous
+## 13. Communication
 
-- Entire Agreement: These Terms (plus Privacy Policy) constitute the full agreement.
-- Severability: Invalid provisions do not affect the remainder.
-- No Waiver: Failure to enforce does not waive rights.
-- Assignment: We may assign these Terms; you may not without consent.
+We may communicate with you via:
+- Email
+- In-app notifications
+- Phone (if you provide consent)
 
-## 15. Contact
+## 14. Governing Law
 
-Mail: aoun.ma@foxmail.com
+These Terms are governed by the laws of [Jurisdiction], without regard to its conflict of law principles.
 
-GitHub: https://github.com/nimotecode/nimote_issues
+## 15. Dispute Resolution
 
-By using NimoteCode, you acknowledge that you have read, understood, and agree to these Terms.
+Any disputes shall be resolved through:
+1. Informal negotiation
+2. Binding arbitration (if applicable)
+3. Small claims court (if applicable)
+
+## 16. Entire Agreement
+
+These Terms, along with the Privacy Policy, constitute the entire agreement between you and NimoteCode.
+
+## 17. Assignment
+
+You may not assign your rights without our consent. We may assign our rights to affiliated entities or in case of acquisition.
+
+## 18. Severability
+
+If any provision is held invalid, the remaining provisions remain in effect.
+
+## 19. Waiver
+
+Failure to enforce a right is not a waiver of that right.
+
+## 20. Contact Us
+
+For questions about these Terms:
+- Email: legal@nimotecode.com
+- GitHub: [Terms Issues](https://github.com/nimotecode/nimote_issues/issues)
+
+---
+
+© 2026 NimoteCode. All rights reserved.

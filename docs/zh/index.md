@@ -1,41 +1,52 @@
 ---
 layout: home
-title: NIMOTECODE
+title: NimoteCode
 titleTemplate: false
 
 hero:
-  name: NimoteCode：移动端远程开发 IDE
-  # text: 移动端远程开发 IDE
-  tagline: 随时随地，在手机与平板上获得真实的开发体验
+  name: NimoteCode
+  text: 移动端远程开发 IDE
+  tagline: 真正的开发体验 — 随时随地 — 就在您的手机或平板上。
   actions:
     - theme: brand
-      text: 在 App Store 下载
+      text: 快速入门指南
+      link: /zh/docs/quick-start
+    - theme: brand
+      text: App Store 下载
       link: https://apps.apple.com/app/idXXXXXX
     - theme: brand
-      text: 在 Google Play Store 下载
-      link: https://github.com/nimotecode/nimote_issues
+      text: Google Play 下载
+      link: https://play.google.com/store/apps/details?id=com.nimotecode
     - theme: alt
-      text: GitHub 仓库
+      text: GitHub 查看
       link: https://github.com/nimotecode/nimote_issues
 
 features:
-  - title: 安全 SSH 远程终端
-    details: 支持加密连接、多会话并行运行的服务器远程操作
+  - title: 🔒 安全 SSH 远程终端
+    details: 建立加密的 SSH 连接到您的服务器，支持多个独立会话并行运行。
+    icon: 🔐
 
-  - title: Flutter + Rust 高性能架构
-    details: 流畅跨平台界面 + 原生级后端性能
+  - title: ⚡ Flutter + Rust 驱动
+    details: 提供响应式跨平台界面，结合高性能原生后端能力。
+    icon: ⚡
 
-  - title: 内置 SFTP 文件管理器
-    details: 完整浏览、上传、下载、编辑远程文件系统
+  - title: 📂 集成 SFTP 文件浏览器
+    details: 无缝浏览、上传、下载、编辑和管理远程服务器上的文件，完全访问文件系统。
+    icon: 📂
 
-  - title: 高级语法高亮
-    details: 基于 Tree-sitter，支持数十种语言，准确快速
+  - title: 🎨 高级语法高亮
+    details: 由 Tree-sitter 驱动 — 准确、快速，开箱即支持数十种编程语言。
+    icon: 🎨
 
-  - title: AI 智能代码助手
-    details: 接入你选择的模型，实现上下文补全、重构建议与智能修改
+  - title: 🤖 AI 代码智能
+    details: 集成您偏好的 LLM，获取上下文感知的补全、重构建议和自动代码编辑。
+    icon: 🤖
 
-  - title: Git 可视化管理
-    details: 仓库状态概览、提交历史可视化、差异对比、逐行追踪
+  - title: 📊 可视化 Git 集成
+    details: 仓库状态概览、提交历史可视化、差异查看器和文件/行级别更改跟踪 — 全部内置。
+    icon: 📊
 
-  - title: 自适应现代界面
-    details: 完美适配手机与平板，支持亮/暗模式及自定义主题
+  - title: 📱 自适应现代界面
+    details: 完全响应式设计，适用于手机和平板，支持浅色/深色模式和自定义主题。
+    icon: 📱
+---
