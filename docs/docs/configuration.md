@@ -1,49 +1,61 @@
-# Configuration Examples
+# Configuration
 
-## AI Provider Template Example
+This page helps you set up NimoteCode for stable daily use, with a focus on AI, SSH, and task workflows.
 
-```yaml
-Display Name: My Provider
-Provider: openai | anthropic | gemini | grok | deepseek | zhipu | moonshot | ollama | custom
-API Key: sk-xxxx
-Base URL: https://api.example.com/v1
-Model: model-name
-Temperature: 0.7
-Max Tokens: 4096
-Top P: 1.0
-Enable Streaming: true
-System Prompt: optional
-Context Window Size: 8192
-Enable File Context: true
-```
+## AI Configuration Strategy
 
-## SSH Connection Example
+Create at least two profiles:
 
-```yaml
-Name: Production Server
-Host: 203.0.113.10
-Port: 22
-Username: ubuntu
-Auth: key
-Private Key: (file path or pasted content)
-Passphrase: optional
-```
+- Primary profile for daily coding
+- Backup profile for failover or cost control
 
-## Task Example
+Tune each profile for your usage style:
 
-```yaml
-Label: Flutter Test
-Type: shell
-Command: flutter
-Args: [test]
-Group: test
-Scope: ssh
-WorkingDir: ${workspaceFolder}
-Background: false
-```
+- Lower randomness for precise code tasks
+- Higher context for large project reasoning
+- Streaming enabled for faster perceived response
 
-## Notes
+## AI Provider Setup Checklist
 
-- Keep provider credentials secure.
-- Use different configs for chat vs. automation if needed.
-- Validate SSH path and permissions before running tasks.
+- Add provider, API key, endpoint, and model
+- Verify responses in AI Chat
+- Confirm AI Agent can execute with your selected profile
+- Keep prompts and limits aligned with cost/performance goals
+
+## SSH Configuration Strategy
+
+For each server environment, keep a dedicated profile:
+
+- Environment name (for example: Staging, Production)
+- Host, port, user, and authentication method
+- Stable workspace root path for predictable navigation
+
+Recommended:
+
+- Use key-based auth for production servers
+- Separate high-risk and low-risk environments
+- Validate access rights before running tasks
+
+## Tasks Configuration Strategy
+
+Design tasks around recurring outcomes:
+
+- Build and test
+- Lint and format
+- Service restart and health checks
+- Log inspection shortcuts
+
+Tips:
+
+- Use clear task names by team convention
+- Group related tasks for quick filtering
+- Keep high-risk commands clearly labeled
+
+## Launch-Ready Baseline
+
+Before daily usage, confirm:
+
+1. AI profile works in Chat and Agent
+2. SSH profile can connect and open workspace
+3. At least one build/test task runs successfully
+4. Source Control can complete commit and sync

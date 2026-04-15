@@ -1,300 +1,580 @@
-/**
- * Custom CSS for NimoteCode documentation
- */
+/* NimoteCode VitePress Theme - Unified Color System */
 
- /* Brand Colors */
- :root {
-   --vp-c-brand: #646cff;
-   --vp-c-brand-light: #747bff;
-   --vp-c-brand-lighter: #828dff;
-   --vp-c-brand-dark: #535bf2;
-   --vp-c-brand-darker: #434ae8;
-   
-   --nimote-primary: #646cff;
-   --nimote-gradient: linear-gradient(135deg, #646cff 0%, #747bff 100%);
-   --nimote-dark-gradient: linear-gradient(135deg, #434ae8 0%, #535bf2 100%);
- }
- 
- /* Hero Section Enhancements */
- .VPHero {
-   text-align: center;
-   padding-top: 4rem;
-   animation: fadeIn 0.8s ease-out;
- }
- 
- .VPHome {
-   padding-bottom: 4rem;
- }
- 
- /* Feature Cards */
- .VPFeatures {
-   padding-bottom: 4rem;
- }
- 
- .VPFeature {
-   border-radius: 12px;
-   transition: all 0.3s ease;
-   animation: scaleIn 0.6s ease-out;
- }
- 
- .VPFeature:hover {
-   transform: translateY(-4px);
-   box-shadow: 0 8px 24px rgba(100, 108, 255, 0.15);
- }
- 
- .VPFeature .icon {
-   font-size: 2.5rem;
-   margin-bottom: 1rem;
-   line-height: 1;
- }
- 
- /* Navbar */
- .VPNavBar {
-   background: rgba(255, 255, 255, 0.9);
-   backdrop-filter: blur(10px);
-   border-bottom: 1px solid rgba(100, 108, 255, 0.1);
- }
- 
- .VPNavBar .title {
-   font-weight: 700;
-   background: var(--nimote-gradient);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   background-clip: text;
- }
- 
- /* Buttons */
- .VPButton {
-   border-radius: 8px;
-   font-weight: 600;
-   transition: all 0.3s ease;
-   padding: 12px 24px;
- }
- 
- .VPButton.brand {
-   background: var(--nimote-gradient);
-   border: none;
-   box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
- }
- 
- .VPButton.brand:hover {
-   transform: translateY(-2px);
-   box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
- }
- 
- .VPButton.alt {
-   border: 2px solid var(--nimote-primary);
-   color: var(--nimote-primary);
-   background: transparent;
- }
- 
- .VPButton.alt:hover {
-   background: var(--nimote-primary);
-   color: white;
-   transform: translateY(-2px);
- }
- 
- /* Footer */
- .VPFooter {
-   border-top: 1px solid var(--vp-c-divider);
-   padding-top: 2rem;
-   background: linear-gradient(to top, #f5f5f5, transparent);
- }
- 
- /* Custom Animations */
- @keyframes fadeIn {
-   from {
-     opacity: 0;
-     transform: translateY(20px);
-   }
-   to {
-     opacity: 1;
-     transform: translateY(0);
-   }
- }
- 
- @keyframes scaleIn {
-   from {
-     opacity: 0;
-     transform: scale(0.9);
-   }
-   to {
-     opacity: 1;
-     transform: scale(1);
-   }
- }
- 
- .animate-fade-in {
-   animation: fadeIn 0.8s ease-out;
- }
- 
- .animate-scale-in {
-   animation: scaleIn 0.6s ease-out;
- }
- 
- /* Animation Delays */
- .animate-delay-100 {
-   animation-delay: 0.1s;
- }
- 
- .animate-delay-200 {
-   animation-delay: 0.2s;
- }
- 
- .animate-delay-300 {
-   animation-delay: 0.3s;
- }
- 
- .animate-delay-400 {
-   animation-delay: 0.4s;
- }
- 
- .animate-delay-500 {
-   animation-delay: 0.5s;
- }
- 
- /* Responsive Adjustments */
- @media (max-width: 768px) {
-   .VPHero {
-     padding-top: 2rem;
-   }
-   
-   .VPFeatures {
-     padding-bottom: 2rem;
-   }
-   
-   .VPFeature .icon {
-     font-size: 2rem;
-   }
-   
-   .VPButton {
-     width: 100%;
-     margin-bottom: 10px;
-   }
- }
- 
- /* Code Block Styling */
- .custom-code-block {
-   border-radius: 8px;
-   overflow: hidden;
-   border: 1px solid var(--vp-c-brand-soft);
-   margin: 1rem 0;
- }
- 
- .custom-code-block pre {
-   border-radius: 0;
-   margin: 0;
- }
- 
- /* Table Styling */
- .vp-doc table {
-   border-radius: 8px;
-   overflow: hidden;
- }
- 
- .vp-doc th {
-   background: var(--nimote-gradient);
-   color: white;
- }
- 
- .vp-doc tr:nth-child(even) {
-   background: rgba(100, 108, 255, 0.05);
- }
- 
- /* Custom Card Styling */
- .custom-card {
-   border-radius: 12px;
-   padding: 1.5rem;
-   margin: 1rem 0;
-   background: white;
-   border: 1px solid var(--vp-c-brand-soft);
-   transition: all 0.3s ease;
- }
- 
- .custom-card:hover {
-   transform: translateY(-4px);
-   box-shadow: 0 8px 24px rgba(100, 108, 255, 0.15);
- }
- 
- /* Tip/Note Boxes */
- .vp-doc .tip {
-   border-left-color: var(--nimote-primary);
-   background: rgba(100, 108, 255, 0.05);
- }
- 
- .vp-doc .note {
-   border-left-color: var(--nimote-primary);
-   background: rgba(100, 108, 255, 0.05);
- }
- 
- /* Dark Mode Support */
- @media (prefers-color-scheme: dark) {
-   :root {
-     --nimote-gradient: linear-gradient(135deg, #747bff 0%, #828dff 100%);
-     --nimote-dark-gradient: linear-gradient(135deg, #535bf2 0%, #646cff 100%);
-   }
-   
-   .VPNavBar {
-     background: rgba(20, 20, 20, 0.9);
-   }
-   
-   .custom-card {
-     background: #1a1a1a;
-     border-color: var(--vp-c-brand-soft);
-   }
-   
-   .vp-doc tr:nth-child(even) {
-     background: rgba(100, 108, 255, 0.1);
-   }
-   
-   .vp-doc .tip,
-   .vp-doc .note {
-     background: rgba(100, 108, 255, 0.1);
-   }
- }
- 
- /* Typography Enhancements */
- .vp-doc h1 {
-   background: var(--nimote-gradient);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   background-clip: text;
- }
- 
- .vp-doc h2 {
-   border-bottom: 2px solid var(--vp-c-brand-soft);
-   padding-bottom: 0.5rem;
-   margin-top: 2rem;
- }
- 
- .vp-doc h3 {
-   color: var(--nimote-primary);
-   margin-top: 1.5rem;
- }
- 
- /* Link Styling */
- .vp-doc a {
-   color: var(--nimote-primary);
-   text-decoration: none;
-   transition: all 0.3s ease;
- }
- 
- .vp-doc a:hover {
-   text-decoration: underline;
-   color: var(--vp-c-brand-darker);
- }
- 
- /* Code Block Enhancements */
- .vp-doc pre {
-   background: #1a1a1a;
-   border-radius: 8px;
- }
- 
- .vp-doc code {
-   font-family: 'JetBrains Mono', 'Fira Code', monospace;
- }
- 
- /* Table of Contents */
- .VPDocTOC {
-   border-left: 2px solid var(--nimote-primary);
- }
+:root {
+  --vp-font-family-base: "Plus Jakarta Sans", "Space Grotesk", "Noto Sans SC", "Segoe UI", sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", "Fira Code", "Cascadia Mono", monospace;
+
+  /* Brand */
+  --vp-c-brand-1: #1f5eff;
+  --vp-c-brand-2: #3f78ff;
+  --vp-c-brand-3: #76a2ff;
+  --vp-c-brand-soft: rgba(31, 94, 255, 0.14);
+
+  /* Unified color tokens */
+  --nimote-accent-rgb: 31, 94, 255;
+  --nimote-accent-2-rgb: 109, 141, 255;
+  --nimote-bg-rgb: 244, 247, 255;
+  --nimote-bg-2-rgb: 248, 250, 255;
+  --nimote-white-rgb: 255, 255, 255;
+  --nimote-deep-rgb: 18, 47, 138;
+
+  --nimote-bg-0: rgb(var(--nimote-bg-rgb));
+  --nimote-bg-1: rgb(var(--nimote-bg-2-rgb));
+  --nimote-card: rgba(var(--nimote-white-rgb), 0.86);
+  --nimote-card-strong: rgba(var(--nimote-white-rgb), 0.95);
+
+  --nimote-border: rgba(var(--nimote-deep-rgb), 0.12);
+  --nimote-border-strong: rgba(var(--nimote-accent-rgb), 0.32);
+  --nimote-nav-border: rgba(var(--nimote-deep-rgb), 0.08);
+  --nimote-nav-bg: rgba(var(--nimote-white-rgb), 0.72);
+  --nimote-sidebar-bg: rgba(var(--nimote-white-rgb), 0.78);
+  --nimote-local-nav-bg: rgba(var(--nimote-white-rgb), 0.88);
+  --nimote-nav-hover-bg: rgba(var(--nimote-accent-rgb), 0.08);
+  --nimote-nav-active-bg: rgba(var(--nimote-accent-rgb), 0.14);
+  --nimote-nav-text: var(--vp-c-text-2);
+  --nimote-nav-text-strong: var(--vp-c-text-1);
+  --nimote-text-tint: rgba(var(--nimote-accent-rgb), 0.12);
+  --nimote-surface-tint: rgba(var(--nimote-accent-rgb), 0.08);
+
+  --nimote-shadow-sm: 0 8px 22px rgba(var(--nimote-deep-rgb), 0.08);
+  --nimote-shadow-md: 0 14px 38px rgba(var(--nimote-deep-rgb), 0.12);
+  --nimote-shadow-brand: 0 14px 28px rgba(var(--nimote-accent-rgb), 0.28);
+
+  --nimote-gradient-main: linear-gradient(138deg, rgb(var(--nimote-accent-rgb)) 0%, rgb(var(--nimote-accent-2-rgb)) 100%);
+  --nimote-gradient-soft: linear-gradient(160deg, rgba(var(--nimote-accent-rgb), 0.15) 0%, rgba(var(--nimote-accent-2-rgb), 0.08) 100%);
+  --nimote-gradient-bg: linear-gradient(180deg, var(--nimote-bg-0) 0%, var(--nimote-bg-1) 32%, rgba(var(--nimote-white-rgb), 1) 100%);
+  --nimote-table-head-text: #fff;
+}
+
+html,
+body,
+#app,
+.Layout {
+  background:
+    radial-gradient(1200px 560px at 8% -8%, rgba(var(--nimote-accent-rgb), 0.11) 0%, transparent 58%),
+    radial-gradient(920px 500px at 92% -6%, rgba(var(--nimote-accent-2-rgb), 0.12) 0%, transparent 62%),
+    var(--nimote-gradient-bg);
+}
+
+.VPNav,
+.VPNavBar,
+.VPNavBar.has-sidebar {
+  background: var(--nimote-nav-bg) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--nimote-nav-border);
+}
+
+/* Ensure top menu row has a fully unified background */
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar .content-body,
+.VPNavBar .divider,
+.VPNavBar .curtain {
+  background: var(--nimote-nav-bg) !important;
+}
+
+.VPNavBar .content-body {
+  border-bottom: 1px solid var(--nimote-nav-border);
+}
+
+.VPSidebar {
+  background: var(--nimote-sidebar-bg);
+  border-right: 1px solid var(--nimote-nav-border);
+}
+
+.VPSidebarItem .item .link,
+.VPSidebarItem .item .text {
+  color: var(--nimote-nav-text);
+}
+
+.VPSidebarItem .item .link:hover,
+.VPSidebarItem .item .link:hover .text {
+  color: var(--nimote-nav-text-strong);
+  background: var(--nimote-nav-hover-bg);
+  border-radius: 10px;
+}
+
+.VPSidebarItem.is-active > .item > .link {
+  background: var(--nimote-nav-active-bg);
+  border-radius: 10px;
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--vp-c-brand-1);
+}
+
+.VPLocalNav {
+  background: var(--nimote-local-nav-bg);
+  border-bottom: 1px solid var(--nimote-nav-border);
+  backdrop-filter: blur(10px);
+}
+
+.VPDocAsideOutline {
+  border-left: 1px solid var(--nimote-nav-border);
+}
+
+.VPNavBar .title,
+.VPNavBarTitle .title {
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  background: var(--nimote-gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero {
+  padding-top: 3.25rem;
+}
+
+.VPHero .name,
+.VPHero .text {
+  letter-spacing: -0.015em;
+}
+
+.VPHero .tagline {
+  color: color-mix(in srgb, var(--vp-c-text-2) 92%, rgb(var(--nimote-accent-rgb)) 8%);
+  max-width: 760px;
+}
+
+.VPHero .actions {
+  gap: 0.68rem;
+}
+
+.VPButton {
+  border-radius: 12px;
+  font-weight: 700;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.VPButton.brand {
+  border: 0;
+  background: var(--nimote-gradient-main);
+  box-shadow: 0 12px 24px rgba(var(--nimote-accent-rgb), 0.27);
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--nimote-shadow-brand);
+}
+
+.VPButton.alt {
+  border: 1px solid rgba(var(--nimote-accent-rgb), 0.36);
+  background: rgba(var(--nimote-white-rgb), 0.8);
+  color: var(--vp-c-brand-1);
+}
+
+.VPButton.alt:hover {
+  background: var(--nimote-surface-tint);
+  transform: translateY(-1px);
+}
+
+.VPFeatures {
+  margin-top: 0.2rem;
+  padding-bottom: 0.9rem;
+}
+
+.VPFeature {
+  border-radius: 16px;
+  border: 1px solid var(--nimote-border);
+  background: var(--nimote-card);
+  backdrop-filter: blur(4px);
+  box-shadow: var(--nimote-shadow-sm);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-3px);
+  border-color: var(--nimote-border-strong);
+  box-shadow: var(--nimote-shadow-md);
+}
+
+.VPFeature .title {
+  font-weight: 700;
+  line-height: 1.32;
+}
+
+.VPFeature .details {
+  margin-top: 0.46rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.56;
+}
+
+.vp-doc {
+  max-width: 860px;
+}
+
+.vp-doc h1 {
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+.vp-doc h2 {
+  margin-top: 2.1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(var(--nimote-accent-rgb), 0.2);
+}
+
+.vp-doc h3 {
+  margin-top: 1.45rem;
+  color: color-mix(in srgb, var(--vp-c-text-1) 86%, rgb(var(--nimote-accent-rgb)) 14%);
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.78;
+}
+
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
+}
+
+.vp-doc code {
+  font-size: 0.84em;
+  border: 1px solid rgba(var(--nimote-accent-rgb), 0.2);
+  background: rgba(var(--nimote-accent-rgb), 0.07);
+  border-radius: 6px;
+  padding: 0.12em 0.38em;
+}
+
+.vp-doc pre {
+  border-radius: 14px;
+  border: 1px solid rgba(var(--nimote-accent-2-rgb), 0.22);
+  box-shadow: var(--nimote-shadow-sm);
+}
+
+.vp-doc table {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(var(--nimote-accent-rgb), 0.16);
+  box-shadow: var(--nimote-shadow-sm);
+}
+
+.vp-doc th {
+  background: var(--nimote-gradient-main);
+  color: var(--nimote-table-head-text);
+}
+
+.vp-doc tr:nth-child(even) {
+  background: rgba(var(--nimote-accent-rgb), 0.045);
+}
+
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: rgba(var(--nimote-accent-rgb), 0.06);
+  border-radius: 0 10px 10px 0;
+  padding: 0.75rem 0.95rem;
+}
+
+.vp-doc .tip,
+.vp-doc .note,
+.vp-doc .info,
+.vp-doc .warning,
+.vp-doc .danger {
+  border-radius: 12px;
+  border: 1px solid rgba(var(--nimote-accent-rgb), 0.2);
+}
+
+.VPSidebarItem .text,
+.VPDocAside .outline-link {
+  transition: color 0.18s ease;
+  color: var(--nimote-nav-text);
+}
+
+.VPSidebarItem.is-active > .item > .link > .text,
+.VPDocAside .outline-link.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPFooter {
+  border-top: 1px solid rgba(var(--nimote-deep-rgb), 0.12);
+  background: linear-gradient(180deg, transparent 0%, rgba(var(--nimote-accent-rgb), 0.035) 100%);
+}
+
+/* Features Page - Premium Panel Composition */
+.feature-hero {
+  position: relative;
+  margin: 0.5rem 0 1.25rem;
+  padding: 1.2rem 1.05rem;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 26%, transparent);
+  background:
+    radial-gradient(120% 150% at 85% 20%, rgba(var(--nimote-accent-rgb), 0.22) 0%, transparent 52%),
+    linear-gradient(145deg, rgba(var(--nimote-accent-rgb), 0.14) 0%, rgba(var(--nimote-accent-2-rgb), 0.08) 56%, rgba(var(--nimote-white-rgb), 0.04) 100%);
+  box-shadow: var(--nimote-shadow-md);
+}
+
+.feature-eyebrow {
+  margin: 0 0 0.45rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+}
+
+.feature-hero h2 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 1.34rem;
+  line-height: 1.25;
+  color: var(--vp-c-text-1);
+}
+
+.feature-lead {
+  margin: 0.68rem 0 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.68;
+}
+
+.feature-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.72rem;
+  margin: 0.95rem 0 1.6rem;
+}
+
+.feature-kpi {
+  border: 1px solid var(--nimote-border);
+  border-radius: 14px;
+  padding: 0.72rem 0.82rem 0.76rem;
+  background: var(--nimote-card-strong);
+  box-shadow: var(--nimote-shadow-sm);
+}
+
+.kpi-value {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--vp-c-brand-1);
+}
+
+.kpi-label {
+  margin: 0.24rem 0 0;
+  font-size: 0.77rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.35;
+}
+
+.feature-section-note {
+  margin: 0.2rem 0 0.85rem;
+  color: var(--vp-c-text-2);
+  font-size: 0.93rem;
+}
+
+.feature-grid {
+  margin: 0.2rem 0 1.38rem;
+  padding: 0.5rem 0.52rem 0.14rem;
+  border-radius: 16px;
+  border: 1px solid var(--nimote-border);
+  background: linear-gradient(180deg, rgba(var(--nimote-bg-2-rgb), 0.82) 0%, rgba(var(--nimote-white-rgb), 0.9) 100%);
+}
+
+.feature-grid-primary {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 30%, var(--nimote-border));
+  box-shadow: inset 0 0 0 1px rgba(var(--nimote-accent-rgb), 0.1);
+}
+
+.feature-grid .VPFeatures {
+  padding-bottom: 0.22rem;
+  margin-top: 0;
+}
+
+.feature-grid .VPFeature {
+  border: 1px solid color-mix(in srgb, var(--nimote-border) 76%, rgb(var(--nimote-white-rgb)));
+  background: linear-gradient(165deg, rgba(var(--nimote-white-rgb), 1) 0%, rgba(var(--nimote-bg-2-rgb), 0.95) 92%);
+  box-shadow: 0 8px 18px rgba(var(--nimote-accent-rgb), 0.08);
+}
+
+.feature-grid .VPFeature:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 36%, var(--nimote-border));
+  box-shadow: 0 14px 24px rgba(var(--nimote-accent-rgb), 0.16);
+}
+
+.feature-grid .VPFeature .title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.32;
+}
+
+.feature-grid .VPFeature .details {
+  margin-top: 0.5rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.56;
+  font-size: 0.9rem;
+}
+
+/* Motion polish */
+.VPHero,
+.vp-doc,
+.feature-hero,
+.feature-kpi,
+.feature-grid .VPFeature {
+  animation: nimote-fade-up 0.5s ease both;
+}
+
+@keyframes nimote-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .feature-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .VPHero {
+    padding-top: 2.35rem;
+  }
+
+  .VPButton {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .vp-doc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-hero {
+    margin-top: 0.35rem;
+    padding: 1rem 0.84rem;
+    border-radius: 14px;
+  }
+
+  .feature-hero h2 {
+    font-size: 1.12rem;
+  }
+
+  .feature-kpis {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .feature-grid {
+    padding: 0.42rem 0.34rem 0.05rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .feature-grid .VPFeature .details {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+}
+
+/* Dark mode */
+.dark {
+  --nimote-accent-rgb: 92, 131, 255;
+  --nimote-accent-2-rgb: 150, 176, 255;
+  --nimote-bg-rgb: 13, 19, 36;
+  --nimote-bg-2-rgb: 15, 21, 40;
+  --nimote-white-rgb: 255, 255, 255;
+  --nimote-deep-rgb: 8, 16, 38;
+
+  --nimote-card: rgba(22, 30, 52, 0.82);
+  --nimote-card-strong: rgba(24, 34, 58, 0.9);
+  --nimote-border: rgba(146, 172, 255, 0.18);
+  --nimote-border-strong: rgba(146, 172, 255, 0.42);
+  --nimote-nav-border: rgba(140, 168, 255, 0.16);
+  --nimote-nav-bg: rgba(11, 17, 34, 0.72);
+  --nimote-sidebar-bg: rgba(13, 20, 40, 0.82);
+  --nimote-local-nav-bg: rgba(15, 23, 45, 0.9);
+  --nimote-nav-hover-bg: rgba(var(--nimote-accent-rgb), 0.18);
+  --nimote-nav-active-bg: rgba(var(--nimote-accent-rgb), 0.24);
+  --nimote-nav-text: rgba(223, 231, 255, 0.78);
+  --nimote-nav-text-strong: rgba(238, 243, 255, 0.96);
+  --nimote-text-tint: rgba(122, 154, 255, 0.18);
+  --nimote-surface-tint: rgba(92, 131, 255, 0.18);
+
+  --nimote-shadow-sm: 0 10px 24px rgba(2, 7, 22, 0.35);
+  --nimote-shadow-md: 0 16px 40px rgba(2, 8, 24, 0.42);
+  --nimote-shadow-brand: 0 14px 28px rgba(92, 131, 255, 0.32);
+
+  --nimote-gradient-main: linear-gradient(138deg, rgba(92, 131, 255, 1) 0%, rgba(150, 176, 255, 1) 100%);
+  --nimote-gradient-soft: linear-gradient(160deg, rgba(92, 131, 255, 0.2) 0%, rgba(150, 176, 255, 0.12) 100%);
+  --nimote-gradient-bg: linear-gradient(180deg, rgb(11, 17, 34) 0%, rgb(13, 20, 40) 46%, rgb(15, 23, 45) 100%);
+}
+
+.dark html,
+.dark body,
+.dark #app,
+.dark .Layout {
+  background:
+    radial-gradient(1050px 520px at 8% -12%, rgba(var(--nimote-accent-rgb), 0.2) 0%, transparent 58%),
+    radial-gradient(900px 520px at 92% -8%, rgba(var(--nimote-accent-2-rgb), 0.14) 0%, transparent 62%),
+    var(--nimote-gradient-bg);
+}
+
+.dark .VPNav,
+.dark .VPNavBar,
+.dark .VPNavBar.has-sidebar {
+  background: var(--nimote-nav-bg) !important;
+  border-bottom-color: var(--nimote-nav-border);
+}
+
+.dark .VPNavBar .container,
+.dark .VPNavBar .content,
+.dark .VPNavBar .content-body,
+.dark .VPNavBar .divider,
+.dark .VPNavBar .curtain {
+  background: var(--nimote-nav-bg) !important;
+}
+
+.dark .VPSidebar {
+  background: var(--nimote-sidebar-bg);
+  border-right-color: var(--nimote-nav-border);
+}
+
+.dark .VPLocalNav {
+  background: var(--nimote-local-nav-bg);
+  border-bottom-color: var(--nimote-nav-border);
+}
+
+.dark .VPButton.alt {
+  background: rgba(19, 30, 56, 0.8);
+  border-color: rgba(var(--nimote-accent-2-rgb), 0.45);
+}
+
+.dark .vp-doc code {
+  background: rgba(var(--nimote-accent-rgb), 0.22);
+  border-color: rgba(var(--nimote-accent-2-rgb), 0.35);
+}
+
+.dark .feature-grid {
+  background: linear-gradient(180deg, rgba(20, 29, 51, 0.78) 0%, rgba(17, 25, 46, 0.88) 100%);
+}
+
+.dark .feature-grid .VPFeature {
+  background: linear-gradient(165deg, rgba(23, 33, 58, 0.96) 0%, rgba(20, 29, 52, 0.98) 92%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

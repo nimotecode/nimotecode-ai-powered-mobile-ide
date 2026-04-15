@@ -7,35 +7,43 @@ Need help with NimoteCode?
 - Email: aoun.ma@foxmail.com
 - GitHub Issues: https://github.com/nimotecode/nimote_issues/issues
 
+## Privacy / Account Requests
+
+For privacy, account, or data deletion requests, contact us through the channels above and include:
+
+- your account email (if available)
+- your platform (iOS/Android)
+- request type (access/correction/deletion)
+
 ## Common Questions
 
 ### SSH connection fails
 
-1. Verify host/port/username/auth method
-2. Confirm SSH service is reachable from your network
-3. Re-check private key format or password
-4. Reconnect from the saved connection profile
+1. Verify host/port/username/auth method.
+2. Confirm SSH service reachability from your network.
+3. Re-check private key format or password.
+4. Retry from a saved connection profile.
 
-### Terminal is not responding
+### Terminal not responding
 
-1. Confirm workspace connection is active
-2. Open a new terminal tab
-3. Check shell availability on the remote host
+1. Confirm workspace connection status.
+2. Open a new terminal tab and retry.
+3. Check shell availability on remote host.
 
-### AI is not responding
+### AI not responding
 
-1. Check provider config (API key/base URL/model)
-2. Verify network access to provider endpoint
-3. Try a different configured provider
+1. Verify provider config (API key/base URL/model).
+2. Verify network access to provider endpoint.
+3. Try another configured provider.
 
 ### Source Control actions fail
 
-1. Confirm workspace is a valid git repository
-2. Check git identity/config in repo
-3. Refresh Source Control panel and retry
+1. Confirm workspace is a valid Git repository.
+2. Check Git identity/config in repo.
+3. Refresh Source Control panel and retry.
 
 ### Pro feature unavailable
 
-1. Check login state
-2. Trigger subscription verification
-3. Retry from the gated feature panel
+1. Check login state.
+2. Trigger subscription verification.
+3. Retry from the gated feature entry.

@@ -1,43 +1,59 @@
-# 配置示例
+# 配置指南
 
-## AI 提供商示例
+本页帮助你将 NimoteCode 配置为可稳定日用的移动开发环境，重点覆盖 AI、SSH 与 Tasks。
 
-```yaml
-Display Name: My Provider
-Provider: openai | anthropic | gemini | grok | deepseek | zhipu | moonshot | ollama | custom
-API Key: sk-xxxx
-Base URL: https://api.example.com/v1
-Model: model-name
-Temperature: 0.7
-Max Tokens: 4096
-Top P: 1.0
-Enable Streaming: true
-System Prompt: optional
-Context Window Size: 8192
-Enable File Context: true
-```
+## AI 配置策略
 
-## SSH 连接示例
+建议至少准备两个配置：
 
-```yaml
-Name: Production Server
-Host: 203.0.113.10
-Port: 22
-Username: ubuntu
-Auth: key
-Private Key: 文件路径或粘贴私钥
-Passphrase: optional
-```
+- 主配置：日常编码与分析
+- 备配置：故障切换或成本控制
 
-## Task 示例
+调优方向：
 
-```yaml
-Label: Flutter Test
-Type: shell
-Command: flutter
-Args: [test]
-Group: test
-Scope: ssh
-WorkingDir: ${workspaceFolder}
-Background: false
-```
+- 精准代码任务：降低随机性
+- 大项目推理：提高上下文容量
+- 追求响应速度：开启流式输出
+
+## AI 提供商配置清单
+
+- 填写 provider、API key、endpoint、model
+- 在 AI Chat 中验证可用性
+- 确认 AI Agent 可使用该配置执行
+- 结合成本与质量设置输出参数
+
+## SSH 配置策略
+
+为每个环境建立独立配置档：
+
+- 环境名称（如 Staging、Production）
+- Host、Port、User、认证方式
+- 稳定的 workspace root，避免误操作路径
+
+推荐实践：
+
+- 生产环境优先私钥认证
+- 高风险与低风险环境分离
+- 执行任务前先确认权限边界
+
+## Tasks 配置策略
+
+按结果导向组织任务：
+
+- 构建与测试
+- 检查与格式化
+- 服务重启与健康检查
+- 日志与诊断快捷操作
+
+建议：
+
+- 任务命名遵循团队规范
+- 使用分组提升检索效率
+- 高风险命令显式标注
+
+## 上线前基线检查
+
+1. AI 配置在 Chat 与 Agent 均可用。
+2. SSH 配置能稳定连接并打开工作区。
+3. 至少一条 build/test 任务可成功执行。
+4. Source Control 可完成提交与同步。

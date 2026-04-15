@@ -1,42 +1,31 @@
 # SSH Workspace
 
-NimoteCode supports SSH-based remote workspace development.
+SSH Workspace turns NimoteCode into a practical remote development cockpit on mobile.
 
-## Connection Setup
+## What You Can Do
 
-Required fields:
+- Save server connection profiles
+- Connect via password or key authentication
+- Open and operate inside remote project directories
+- Browse, edit, create, rename, and delete files remotely
+- Keep terminal and editor in one shared workspace context
 
-- Host
-- Port
-- Username
-- Authentication method
+## Typical Remote Session
 
-Supported authentication methods:
+1. Select an SSH profile.
+2. Connect and open workspace root.
+3. Edit files and run terminal commands.
+4. Validate changes with Source Control and optional Debug/LSP tools.
 
-- Password
-- Private key
-  - key file path
-  - pasted private key content
-  - optional passphrase
+## Best-Practice Recommendations
 
-## Connection Flow
+- Use dedicated profiles per environment
+- Prefer key-based auth for critical servers
+- Keep clear workspace roots to avoid accidental scope errors
 
-1. Create a new remote connection
-2. Connect to server
-3. Enter or confirm remote workspace directory
-4. Open files and terminal in the same workspace context
+## Related Pages
 
-## Explorer and File Actions
-
-Remote Explorer provides:
-
-- Directory tree browsing
-- Open file in editor
-- Create file/folder
-- Rename/delete operations
-- Workspace/session history support
-
-## Notes
-
-- If connection drops, reconnect from the same profile.
-- Ensure target path is valid and accessible on the remote host.
+- [Terminal](/docs/terminal)
+- [Source Control](/docs/source-control)
+- [LSP Panel](/docs/lsp)
+- [Debug Panel](/docs/debug)

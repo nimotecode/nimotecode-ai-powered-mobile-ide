@@ -1,43 +1,84 @@
-# 快速开始
+# 快速开始（3 分钟）
 
-## 1. 打开工作区
+本指南以“第一次就跑通”为目标。
 
-可从两种模式开始：
+## 目标
 
-- Local Explorer：打开本地目录
+3 分钟内完成：
+
+1. 打开工作区
+2. 跑通一条命令
+3. 编辑并保存一个文件
+4. 使用一个高价值面板（Source Control / AI / Debug）
+
+## 第一步：打开工作区（30 秒）
+
+选择一种模式：
+
+- Local Explorer：打开本地项目目录
 - Remote Explorer：通过 SSH 连接远程工作区
 
-## 2. 连接远程（可选）
+若使用远程模式：
 
-1. 新建连接配置
-2. 填写 host / port / username
-3. 选择认证方式（密码或私钥）
-4. 连接并确认远程工作区路径
+1. 新建 SSH 配置（`host`、`port`、`username`）
+2. 选择认证方式（密码或私钥）
+3. 连接并确认工作区根路径
 
-## 3. 编辑代码
+## 第二步：终端执行命令（30 秒）
 
-- 在文件树中打开文件
-- 使用查找替换与符号导航
-- 保存并继续终端或 Source Control 操作
+1. 打开终端面板
+2. 执行验证命令（如 `pwd`、`ls` 或你的 build/test 命令）
+3. 输出过长时使用终端搜索
 
-## 4. 使用终端
+## 第三步：编辑并保存（45 秒）
 
-- 打开一个或多个终端标签
-- 执行常用命令
-- 使用快捷命令和输出搜索
-- 必要时将输出发送给 AI 分析
+1. 从文件树打开源码文件
+2. 修改一行代码
+3. 保存文件
+4. 需要时使用符号导航或查找替换
 
-## 5. 使用 Source Control
+## 第四步：选择一个结果路径（75 秒）
 
-- 查看已修改/已暂存/冲突文件
-- 暂存、取消暂存、丢弃变更
-- 提交并执行分支或 stash 操作
+### 路径 A：提交改动
 
-## 6. 配置 AI
+打开 Source Control：
 
-在 AI 配置面板添加提供商并设置模型与参数，然后在 AI Chat / AI Agent 中使用。
+- 查看改动文件
+- 暂存变更
+- 提交（已配置可继续 push）
 
-## 7. Tasks 与 Timeline
+参考：[/zh/docs/source-control](/zh/docs/source-control)
 
-- 在 Tasks 面板定义和运行任务
-- 在 Timeline 面板查看事件与追踪
+### 路径 B：用 AI 提速
+
+打开 AI 面板：
+
+- 选择 provider 配置
+- 发起解释/重构/修复建议
+- 需要时使用 AI Agent 执行自动化流程
+
+参考：[/zh/docs/ai](/zh/docs/ai)
+
+### 路径 C：快速定位问题（Pro）
+
+打开 LSP/Debug：
+
+- 查看诊断
+- 应用代码动作
+- 启动调试并检查变量/Watch
+
+参考：[/zh/docs/lsp](/zh/docs/lsp)、[/zh/docs/debug](/zh/docs/debug)
+
+## 高价值使用场景
+
+1. 远程环境热修复：`/zh/docs/ssh` + `/zh/docs/terminal` + `/zh/docs/source-control`
+2. 快速 bug 诊断：`/zh/docs/lsp` + `/zh/docs/debug` + `/zh/docs/timeline`
+3. 重复任务自动化：`/zh/docs/tasks` + `/zh/docs/ai`
+4. 稳定日常配置：`/zh/docs/settings` + `/zh/docs/configuration`
+
+## 下一步最佳动作
+
+首次跑通后，建议立即配置：
+
+- AI provider 配置：[/zh/docs/configuration](/zh/docs/configuration)
+- 编辑器与键盘偏好：[/zh/docs/settings](/zh/docs/settings)

@@ -1,25 +1,31 @@
 # Terminal
 
-The terminal module is designed for daily development tasks.
+Terminal is the command center for build, test, deploy, and incident operations in NimoteCode.
 
-## Main Capabilities
+## Core Capabilities
 
-- Multiple terminal tabs
-- Command input/output stream
-- Terminal output search (including advanced search)
-- Quick commands panel
-- Send terminal output to AI analysis
-- Tab customization (name/color/icon)
+- Multi-tab terminal sessions
+- Real-time command output
+- Output search for fast log targeting
+- Quick command shortcuts for repeated actions
+- Send key terminal output to AI for analysis
+- Rename and organize tabs for long workflows
 
-## Typical Usage
+## Typical Command Journey
 
-1. Open terminal from active workspace
-2. Run build/test/deploy/debug commands
-3. Use quick commands for repetitive shell operations
-4. Search terminal output to locate logs/errors
-5. Forward key output to AI for explanation
+1. Open terminal in current workspace.
+2. Run build/test/deploy commands.
+3. Search output for errors and warnings.
+4. Escalate complex logs to AI or Timeline.
 
-## Tips
+## Why It Matters
 
-- Keep separate tabs for server, build, tests, and logs.
-- Rename tabs to reduce context switching cost.
+- Faster command-to-result loop on mobile
+- Better visibility when handling incidents remotely
+- Stronger continuity with editor, source control, and AI panels
+
+## Related Pages
+
+- [SSH Workspace](/docs/ssh)
+- [AI Assistant](/docs/ai)
+- [Timeline Panel](/docs/timeline)

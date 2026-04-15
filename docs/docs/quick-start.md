@@ -1,59 +1,84 @@
-# Quick Start
+# Quick Start (3 Minutes)
 
-This guide follows the currently implemented workflow.
+This guide is optimized for first success in one session.
 
-## 1. Open a Workspace
+## Goal
 
-You can start from either mode:
+In 3 minutes, you will:
 
-- Local Explorer: open a local folder
-- Remote Explorer: connect through SSH
+1. Open a workspace
+2. Run a real command
+3. Edit one file
+4. Use one high-value panel (Source Control / AI / Debug)
 
-## 2. Connect Remote (Optional)
+## Step 1: Open Workspace (30s)
 
-If you use Remote Explorer:
+Choose one mode:
 
-1. Add a connection profile
-2. Fill host / port / username
-3. Choose auth method:
-   - password
-   - private key (path or pasted key content)
-4. Connect and select/confirm remote workspace path
+- Local Explorer: open local project directory
+- Remote Explorer: connect via SSH
 
-## 3. Edit Code
+If using remote mode:
 
-- Open files from explorer tree
-- Use search and replace in file
-- Use symbol outline and symbol search
-- Save edits and continue in terminal/source control
+1. Create SSH profile (`host`, `port`, `username`)
+2. Select auth method (password or private key)
+3. Connect and confirm workspace root path
 
-## 4. Use Terminal
+## Step 2: Run Command in Terminal (30s)
 
-- Open terminal tab(s)
-- Run commands as usual
-- Use quick commands for repeated operations
-- Search terminal output when logs are long
-- Send selected output to AI analysis if needed
+1. Open terminal panel
+2. Run a verification command (for example `pwd`, `ls`, or your build/test command)
+3. If output is long, use terminal search
 
-## 5. Use Source Control
+## Step 3: Edit and Save (45s)
 
-In Source Control panel:
+1. Open a source file from explorer
+2. Edit one line
+3. Save file
+4. Use symbol navigation or in-file find/replace if needed
 
-- Inspect modified/staged/conflict files
-- Stage/unstage/discard changes
-- Commit (and push if configured)
-- Manage branch or stash operations
+## Step 4: Choose One Outcome Path (75s)
 
-## 6. Configure AI
+### Path A: Commit Changes
 
-In AI Configuration panel:
+Open Source Control and:
 
-1. Add provider config
-2. Set API key/base URL/model
-3. Tune advanced parameters
-4. Use AI Chat or AI Agent in workflow
+- inspect modified files
+- stage changes
+- commit (and push if configured)
 
-## 7. Run Tasks and Check Timeline
+Reference: [/docs/source-control](/docs/source-control)
 
-- Define and run project tasks in Tasks panel
-- Inspect event/trace flow in Timeline panel for diagnostics
+### Path B: Ask AI to Accelerate
+
+Open AI panel and:
+
+- choose provider config
+- ask for explanation/refactor/fix suggestions
+- optionally run AI Agent for workflow automation
+
+Reference: [/docs/ai](/docs/ai)
+
+### Path C: Diagnose Faster (Pro)
+
+Open LSP/Debug and:
+
+- check diagnostics
+- apply code actions
+- start debug session and inspect variables/watch
+
+References: [/docs/lsp](/docs/lsp), [/docs/debug](/docs/debug)
+
+## High-Value Scenarios
+
+1. Remote hotfix on production-like server: `/docs/ssh` + `/docs/terminal` + `/docs/source-control`
+2. Fast bug triage: `/docs/lsp` + `/docs/debug` + `/docs/timeline`
+3. Repetitive task automation: `/docs/tasks` + `/docs/ai`
+4. Stable daily setup: `/docs/settings` + `/docs/configuration`
+
+## Next Best Step
+
+After first run, configure these immediately:
+
+- AI provider profile: [/docs/configuration](/docs/configuration)
+- Editor and keyboard preferences: [/docs/settings](/docs/settings)

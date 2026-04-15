@@ -57,8 +57,14 @@ export default defineConfig({
               items: [
                 { text: 'SSH Remote Development', link: '/docs/ssh' },
                 { text: 'Terminal Usage', link: '/docs/terminal' },
-                { text: 'GitHub Integration', link: '/docs/github' },
+                { text: 'Source Control Workflow', link: '/docs/source-control' },
                 { text: 'AI Assistant', link: '/docs/ai' },
+                { text: 'LSP Panel', link: '/docs/lsp' },
+                { text: 'Debug Panel', link: '/docs/debug' },
+                { text: 'Tasks Panel', link: '/docs/tasks' },
+                { text: 'Timeline Panel', link: '/docs/timeline' },
+                { text: 'Sync / Cache Panel', link: '/docs/sync-cache' },
+                { text: 'Settings', link: '/docs/settings' },
                 { text: 'Configuration', link: '/docs/configuration' }
               ]
             },
@@ -107,8 +113,14 @@ export default defineConfig({
               items: [
                 { text: 'SSH 远程开发', link: '/zh/docs/ssh' },
                 { text: '终端使用', link: '/zh/docs/terminal' },
-                { text: 'GitHub 集成', link: '/zh/docs/github' },
+                { text: 'Source Control 工作流', link: '/zh/docs/source-control' },
                 { text: 'AI 助手', link: '/zh/docs/ai' },
+                { text: 'LSP 面板', link: '/zh/docs/lsp' },
+                { text: '调试面板', link: '/zh/docs/debug' },
+                { text: 'Tasks 面板', link: '/zh/docs/tasks' },
+                { text: 'Timeline 面板', link: '/zh/docs/timeline' },
+                { text: 'Sync / Cache 面板', link: '/zh/docs/sync-cache' },
+                { text: '设置', link: '/zh/docs/settings' },
                 { text: '配置', link: '/zh/docs/configuration' }
               ]
             },

@@ -1,34 +1,35 @@
 # Introduction
 
-NimoteCode is a mobile IDE focused on real development workflows across local and SSH workspaces.
+NimoteCode is a mobile-first IDE that lets you develop, debug, and ship from your phone or tablet.
+
+## Why Teams Choose NimoteCode
+
+- One workspace for coding, terminal, source control, AI, and troubleshooting
+- Built for real SSH server workflows, not lightweight toy editing
+- Fast issue triage with LSP diagnostics, debug tools, and timeline analysis
+- Productive on mobile with keyboard preferences, editor typography, and focused panels
 
 ## What You Can Do
 
-- Open a local folder or connect to a remote server via SSH.
-- Edit code with syntax highlighting, outline, search, and replace.
-- Run terminal commands in multiple tabs.
-- Use Source Control features inside the app.
-- Configure AI providers and use AI Chat or AI Agent workflows.
-- Run project tasks and inspect Timeline events/traces.
+- Connect local or remote workspaces and edit project files instantly
+- Run build/test/deploy commands in multi-tab terminal sessions
+- Commit, sync, branch, stash, diff, and review changes in Source Control
+- Use AI Chat and AI Agent to explain, refactor, and automate repetitive tasks
+- Diagnose problems with LSP, Debug, Tasks, and Timeline panels
 
-## Architecture
+## Built for Real Delivery
 
-- Frontend: Flutter (Dart)
-- Native/plugin layer: Rust (via Flutter Rust Bridge)
-- Workspace model: Local + Remote (SSH)
+NimoteCode is designed for practical delivery scenarios:
 
-## Typical Workflow
+1. Remote hotfix while away from laptop
+2. On-call incident triage with logs + timeline traces
+3. Daily commit workflow with in-app source control
+4. AI-assisted coding and repetitive workflow automation
 
-1. Open Local Explorer or connect Remote Explorer.
-2. Open files, edit, and save.
-3. Run commands in terminal tabs.
-4. Check Source Control changes and commit.
-5. Use AI to explain, refactor, or automate repetitive actions.
-
-## Next Steps
+## Explore Next
 
 - [Features](/features)
 - [Quick Start](/docs/quick-start)
-- [SSH](/docs/ssh)
-- [Terminal](/docs/terminal)
+- [SSH Workspace](/docs/ssh)
+- [Source Control](/docs/source-control)
 - [AI](/docs/ai)

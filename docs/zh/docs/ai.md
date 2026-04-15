@@ -1,50 +1,56 @@
-# AI 使用指南
+# AI 助手
 
-NimoteCode 提供 AI Chat 与 AI Agent 两类能力。
+NimoteCode 提供两类 AI 能力：AI Chat 用于即时辅助，AI Agent 用于多步骤执行。
 
 ## AI Chat
 
-适用于：
+适合高频开发问答场景：
 
-- 代码解释
-- 错误分析
-- 重构建议
-- 终端输出解读
+- 解释陌生代码
+- 分析终端报错
+- 给出重构建议
+- 在提交前提供更稳妥的改动建议
 
 ## AI Agent
 
-Agent 提供工具驱动执行流，包含：
+适合需要连续动作的复杂任务：
 
-- 步骤反馈
-- 进度与状态
-- 风险提示
-- 自动模式 / 确认模式
+- 分步骤执行流程
+- 运行进度与状态可视化
+- 高风险操作前提示确认
+- 支持自动模式与确认模式
 
-## 提供商配置
+## 多提供商支持
 
-内置模板：
+可按团队偏好选择：
 
 - OpenAI
 - Anthropic
-- Google Gemini
-- xAI Grok
+- Gemini
+- Grok
 - DeepSeek
-- Zhipu AI
-- Moonshot AI
+- Zhipu
+- Moonshot
 - Ollama
-- Custom OpenAI-compatible
+- 自定义 OpenAI 兼容端点
 
-可配置参数：
+## 可配置能力
 
-- display name
-- provider key
-- API key
-- base URL
-- model
-- temperature
-- max tokens
-- top-p
-- streaming
-- system prompt
-- context window size
-- file context
+- 模型与服务端点
+- 采样参数与输出规模
+- 流式响应模式
+- 系统提示词与上下文窗口
+- 文件上下文开关（代码库感知）
+
+## 推荐配置方式
+
+1. 保留一个主力模型与一个备用模型。
+2. 代码任务优先低随机性。
+3. 项目级分析开启文件上下文。
+4. 生产使用前对 AI 结果做人工校验。
+
+## 相关页面
+
+- [配置指南](/zh/docs/configuration)
+- [Source Control](/zh/docs/source-control)
+- [Timeline 面板](/zh/docs/timeline)

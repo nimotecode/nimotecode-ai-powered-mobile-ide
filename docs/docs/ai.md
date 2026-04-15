@@ -1,55 +1,56 @@
-# AI Guide
+# AI Assistant
 
-NimoteCode includes AI Chat and AI Agent workflows.
+NimoteCode includes two AI experiences: AI Chat for direct help and AI Agent for multi-step execution.
 
 ## AI Chat
 
-Use AI Chat for:
+Use AI Chat when you want fast answers during coding:
 
-- code explanation
-- bug analysis
-- refactor suggestions
-- terminal output analysis
+- Explain unfamiliar code
+- Analyze terminal errors
+- Propose refactor plans
+- Generate safer next steps before commit
 
 ## AI Agent
 
-AI Agent provides tool-driven execution with runtime feedback, including:
+Use AI Agent when work requires multiple actions and checks:
 
-- execution steps
-- progress and status
-- risk/warning hints
-- auto mode / confirm mode
+- Step-by-step execution flow
+- Progress visibility and run status
+- Risk prompts before sensitive actions
+- Auto mode or confirm mode based on your control preference
 
-## Provider Configuration
+## Provider Flexibility
 
-Built-in templates:
+NimoteCode supports multiple provider templates:
 
 - OpenAI
 - Anthropic
-- Google Gemini
-- xAI Grok
+- Gemini
+- Grok
 - DeepSeek
-- Zhipu AI
-- Moonshot AI
+- Zhipu
+- Moonshot
 - Ollama
-- Custom OpenAI-compatible
+- Custom OpenAI-compatible endpoints
 
-Configurable fields include:
+## What You Can Configure
 
-- display name
-- provider key
-- API key
-- base URL
-- model
-- temperature
-- max tokens
-- top-p
-- streaming toggle
-- system prompt
-- context window size
-- file context toggle
+- Model identity and endpoint
+- Sampling behavior and output size
+- Streaming response mode
+- System prompt and context size
+- File-context usage for codebase-aware responses
 
-## Provider Selection
+## Best-Practice Setup
 
-- AI Chat and Git AI workflows can select provider configs.
-- Ensure at least one valid provider config is saved.
+1. Keep one primary cloud model and one backup model.
+2. Use lower creativity for deterministic coding tasks.
+3. Keep file context on for project-level analysis.
+4. Review AI output before running in production.
+
+## Related Pages
+
+- [Configuration](/docs/configuration)
+- [Source Control](/docs/source-control)
+- [Timeline](/docs/timeline)
