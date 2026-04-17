@@ -1,3 +1,7 @@
+---
+title: Features | NimoteCode
+---
+
 # Features
 
 <div class="feature-hero">
@@ -6,270 +10,251 @@
   <p class="feature-lead">From SSH access to final commit, NimoteCode keeps coding, diagnosis, automation, and release workflows connected in one focused mobile interface.</p>
 </div>
 
-<div class="feature-kpis">
-  <div class="feature-kpi">
-    <p class="kpi-value">10+</p>
-    <p class="kpi-label">Core panels</p>
-  </div>
-  <div class="feature-kpi">
-    <p class="kpi-value">2 Modes</p>
-    <p class="kpi-label">Local + SSH workspace</p>
-  </div>
-  <div class="feature-kpi">
-    <p class="kpi-value">Pro</p>
-    <p class="kpi-label">LSP / Debug / Sync / Source Control</p>
-  </div>
-  <div class="feature-kpi">
-    <p class="kpi-value">End-to-End</p>
-    <p class="kpi-label">Edit, run, analyze, ship</p>
-  </div>
-</div>
+## Overview
 
-## Feature Summary
+| Category | Capabilities | Availability |
+|----------|-------------|-------------|
+| **Workspace & File Management** | Local & SSH workspaces, file explorer, SSH profiles, auto-reconnection | Free |
+| **Terminal** | Multi-tab, persistence, search, output parsing | Free |
+| **Source Control** | Git workflow, diffs, commits, branches, stash, Git AI | Pro |
+| **LSP & Debug** | Diagnostics, code actions, breakpoints, call stack, variables | Pro |
+| **AI & Automation** | AI Chat, AI Agent, memory system, provider templates | Free |
+| **Tasks & Timeline** | Task runner, timeline tracing, causal analysis, AI diagnostics | Free |
+| **Sync / Cache** | Local↔Remote sync, path safety, operation history | Pro |
+| **Settings & Account** | Theme, language, keyboard, authentication, subscriptions | Free |
 
-<p class="feature-section-note">A high-level snapshot of the complete product surface.</p>
+---
 
-<div class="feature-grid feature-grid-primary">
-<VPFeatures>
-  <VPFeature
-    title="Remote Workspace"
-    details="Connect to SSH workspaces, manage server profiles, and work on real remote projects from mobile. Guide: /docs/ssh"
-  />
-  <VPFeature
-    title="Terminal and Commands"
-    details="Run build/test/deploy commands in multi-tab terminals and find key logs faster with output search. Guide: /docs/terminal"
-  />
-  <VPFeature
-    title="Source Control"
-    details="Complete Git workflow in-app: review diffs, stage clean commits, sync branches, and use Git AI for safer delivery. Guide: /docs/source-control"
-  />
-  <VPFeature
-    title="LSP and Debug (Pro)"
-    details="Use diagnostics and code actions to narrow issues, then debug with breakpoints, call stack, variables, and watch. Guides: /docs/lsp, /docs/debug"
-  />
-  <VPFeature
-    title="AI Workflows"
-    details="Choose your provider and use AI Chat + AI Agent for analysis, refactor planning, and repetitive workflow automation. Guide: /docs/ai"
-  />
-  <VPFeature
-    title="Tasks and Timeline"
-    details="Standardize recurring commands and turn runtime events into root-cause traces with actionable fix suggestions. Guides: /docs/tasks, /docs/timeline"
-  />
-  <VPFeature
-    title="Sync / Cache (Pro)"
-    details="Move project content between local and remote workspaces with direction control, target path safety, and operation history. Guide: /docs/sync-cache"
-  />
-  <VPFeature
-    title="Account and Subscription"
-    details="Sign in, verify entitlement/trial status, and restore purchases for uninterrupted Pro workflows."
-  />
-  <VPFeature
-    title="Settings and Keyboard"
-    details="Tune theme, language, editor typography, soft keyboard, and keyboard behavior for long mobile coding sessions. Guide: /docs/settings"
-  />
-  <VPFeature
-    title="Notifications"
-    details="Track in-app events and updates through built-in notification flows."
-  />
-</VPFeatures>
-</div>
+## Workspace & Connectivity
 
-## Core Workspace
+### Core Workspace Features
 
-<p class="feature-section-note">Everything starts with stable project access and low-friction file operations.</p>
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Dual Workspace Modes** | Support for both local filesystem and remote SSH workspaces | Local: device storage access; SSH: secure remote connection | Free |
+| **SSH Connection Profiles** | Save and manage multiple server configurations | Persistent storage via Hive, automatic last workspace restoration | Free |
+| **Heartbeat Monitoring** | Continuous connection health checking | 30-second keepalive intervals, background/foreground awareness | Free |
+| **Auto-Reconnection** | Automatic recovery from network failures | Stateful reconnection with terminal session restoration | Free |
+| **App Lifecycle Awareness** | Smart connection management based on app state | Pauses monitoring in background, verifies on resume | Free |
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="Explorer and File Operations"
-    details="Create, move, rename, and edit files quickly with editor-linked navigation that keeps context stable."
-  />
-  <VPFeature
-    title="SSH Connection Profiles"
-    details="Save reusable connection profiles for staging, production, and team environments."
-  />
-  <VPFeature
-    title="Editor Collaboration with Panels"
-    details="Jump between code, diagnostics, debug signals, and workflow panels without losing focus."
-  />
-</VPFeatures>
-</div>
+### File Operations
 
-## Terminal
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **File Explorer** | Tree-based navigation with editor integration | Local & remote (SFTP) filesystem providers | Free |
+| **File Operations** | Create, move, rename, delete files and directories | Atomic operations with error handling | Free |
+| **Editor Integration** | Seamless navigation between explorer and editor | File path tracking, quick open, recent files | Free |
 
-<p class="feature-section-note">Command execution remains first-class for build, test, deploy, and incident response.</p>
+---
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="Multi-Terminal Workflow"
-    details="Run concurrent command sessions across build, test, deploy, and logs in separate tabs."
-  />
-  <VPFeature
-    title="Command Execution and Output"
-    details="Stream command output in real time and keep high-signal logs visible during troubleshooting."
-  />
-  <VPFeature
-    title="Search and Navigation"
-    details="Search long terminal output fast to locate failures and move directly to next action."
-  />
-</VPFeatures>
-</div>
+## Terminal & Command Execution
+
+### Terminal Capabilities
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Multi-Tab Terminal** | Concurrent terminal sessions | Independent channel management, session switching | Free |
+| **Terminal Persistence** | Session restoration after reconnection | Working directory preservation, shell state restoration | Free |
+| **Real-time Output** | Live streaming of command output | Pseudo-terminal emulation, ANSI color support | Free |
+| **Output Search** | Fast search through terminal history | Keyword matching, incremental search | Free |
+| **Terminal Output Parsing** | Automatic extraction of errors and warnings | Rust-based parser, error/warning detection, exit code analysis | Free |
+
+---
 
 ## Source Control (Pro)
 
-<p class="feature-section-note">Deliver cleaner changes with in-app Git workflows and AI-assisted commit quality.</p>
+### Git Workflow
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="Change Management"
-    details="Review staged, unstaged, and conflicted changes with precise file-level control."
-  />
-  <VPFeature
-    title="Commit and Sync"
-    details="Commit confidently and synchronize with pull/push/fetch inside one continuous mobile flow."
-  />
-  <VPFeature
-    title="Branch and Stash"
-    details="Handle branch switching, integration tasks, and stash flows without leaving the app."
-  />
-  <VPFeature
-    title="History and Diff"
-    details="Inspect commit, file, and line history with diff views that support better change decisions."
-  />
-  <VPFeature
-    title="Git AI"
-    details="Generate stronger commit messages, explain changes, and detect potential risk before merge."
-  />
-</VPFeatures>
-</div>
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Change Management** | Staged/unstaged/conflicted changes view | File-level granularity, diff preview per file | Pro |
+| **Commit & Sync** | Complete Git operations in-app | Commit, pull, push, fetch, rebase support | Pro |
+| **Branch Management** | Branch creation, switching, deletion | Local and remote branch listing, checkout | Pro |
+| **Stash Operations** | Stash and apply changes | Stash list, apply, drop, pop operations | Pro |
+| **History & Diff** | Commit history and file diffs | Line-level diff display, blame annotation | Pro |
 
-## LSP and Debug (Pro)
+### Git AI Integration
 
-<p class="feature-section-note">Shorten bug-to-fix time with diagnostics first, runtime inspection next.</p>
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **AI Commit Messages** | Generate high-quality commit messages | Diff analysis, semantic understanding, multiple suggestions | Pro |
+| **Change Explanation** | AI-powered explanation of modifications | Context-aware analysis, impact assessment | Pro |
+| **Risk Detection** | Identify potentially problematic changes | Pattern recognition, anti-pattern detection | Pro |
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="LSP Diagnostics"
-    details="Keep errors and warnings visible, filter by severity, and jump directly to code locations."
-  />
-  <VPFeature
-    title="LSP Code Actions"
-    details="Apply available quick fixes and refresh diagnostics to shorten issue resolution cycles."
-  />
-  <VPFeature
-    title="LSP Install Wizard"
-    details="Set up supported language servers through guided detect/install/recheck flow."
-  />
-  <VPFeature
-    title="Debug Runtime Controls"
-    details="Use pause/continue/step controls to inspect execution state when behavior is unclear."
-  />
-  <VPFeature
-    title="Debug Inspection Panels"
-    details="Inspect breakpoints, threads, call stack, variables, watch expressions, and debug output in one place."
-  />
-  <VPFeature
-    title="Detailed Guides"
-    details="LSP guide: /docs/lsp; Debug guide: /docs/debug"
-  />
-</VPFeatures>
-</div>
+---
 
-## AI and Automation
+## LSP & Debug (Pro)
 
-<p class="feature-section-note">Use AI for instant answers or multi-step execution based on task complexity.</p>
+### Language Server Protocol
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="AI Chat and Agent"
-    details="Switch between direct AI Q&A and step-based agent execution depending on task complexity."
-  />
-  <VPFeature
-    title="Provider Templates"
-    details="Use built-in provider templates or custom OpenAI-compatible endpoints to match your stack."
-  />
-  <VPFeature
-    title="Advanced Model Config"
-    details="Control response style and cost with model parameters, context settings, and streaming options."
-  />
-  <VPFeature
-    title="User Tools and Chat History"
-    details="Load workspace user tools and keep chat/agent history for consistent repeatable workflows."
-  />
-</VPFeatures>
-</div>
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Diagnostics Panel** | Real-time error and warning display | Severity filtering (Error/Warning/Info/Hint), file grouping | Pro |
+| **Code Actions** | Quick fixes and refactor suggestions | LSP codeAction provider, one-click application | Pro |
+| **LSP Install Wizard** | Guided language server setup | Auto-detection, installation, verification flow | Pro |
+| **Go to Definition** | Symbol navigation | LSP definition provider, peek support | Pro |
+| **Reference Finding** | Find all references to a symbol | LSP references provider, usage listing | Pro |
 
-## Tasks, Timeline, and Sync
+### Debugger
 
-<p class="feature-section-note">Unify recurring operations, event diagnosis, and project transfer workflows.</p>
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Runtime Controls** | Pause, continue, step operations | Step over, step into, step out, restart | Pro |
+| **Breakpoints** | Line breakpoints with conditions | Breakpoint management, hit counting, conditional breakpoints | Pro |
+| **Call Stack** | Stack trace navigation | Frame switching, async stack traces | Pro |
+| **Variables Panel** | Inspect and modify variables | Scope grouping, value editing, watch expressions | Pro |
+| **Watch Expressions** | Custom expression evaluation | Real-time updates, formatted output | Pro |
+| **Debug Console** | REPL and expression evaluation | Command execution, output display | Pro |
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="Tasks Panel"
-    details="Run grouped remote tasks with state tracking to standardize recurring team operations. Guide: /docs/tasks"
-  />
-  <VPFeature
-    title="Timeline Panel"
-    details="Transform events into trace-based diagnosis with source/severity filters and fix guidance. Guide: /docs/timeline"
-  />
-  <VPFeature
-    title="Causal Timeline AI"
-    details="Use issue/session workflows and AI analysis export to accelerate complex troubleshooting handoffs."
-  />
-  <VPFeature
-    title="Sync / Cache Panel (Pro)"
-    details="Sync local-to-remote or cache remote-to-local with constrained target paths and operation history. Guide: /docs/sync-cache"
-  />
-</VPFeatures>
-</div>
+---
 
-## Settings and Account
+## AI & Automation
 
-<p class="feature-section-note">Optimize comfort, identity, and entitlement continuity for long mobile sessions.</p>
+### AI Chat & Agent
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="Authentication"
-    details="Use email/password or Google sign-in, including anonymous-to-account upgrade flow."
-  />
-  <VPFeature
-    title="Subscription and Trial"
-    details="Check Pro entitlement, refresh status, and restore purchases to keep paid features available."
-  />
-  <VPFeature
-    title="App Settings"
-    details="Control theme, language, editor typography, and input preferences for daily mobile productivity."
-  />
-  <VPFeature
-    title="Notifications"
-    details="Receive in-app notifications for workflow-relevant events and status updates."
-  />
-</VPFeatures>
-</div>
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Dual AI Modes** | Chat for Q&A, Agent for automation | Intent-based routing, task complexity assessment | Free |
+| **Provider Templates** | Pre-configured AI providers | OpenAI, Anthropic, custom OpenAI-compatible endpoints | Free |
+| **Secure Credential Storage** | Safe API key management | Encrypted storage, keychain integration | Free |
+| **Advanced Model Config** | Fine-grained model parameters | Temperature, max tokens, top-p, streaming options | Free |
 
-## Pro Gating and Mode Notes
+### Memory System
 
-<p class="feature-section-note">Current availability boundaries based on panel gating and workspace mode.</p>
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Short-Term Memory** | Current session context | Message queue, max 100 messages, metadata tracking | Free |
+| **Long-Term Memory** | Persistent knowledge storage | Memory item indexing, tag-based organization, max 1000 items | Free |
+| **Smart Compression** | Multiple compression strategies | Summarize, sliding window, importance-based, hybrid modes | Free |
+| **Token Budget Management** | Context window optimization | Token counting, budget allocation, auto-compression triggers | Free |
+| **Similarity Retrieval** | Relevant memory search | Keyword matching, tag filtering, importance scoring | Free |
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="Current Pro-Locked Panels"
-    details="`sourceControl`, `lsp`, `debug`, `syncCache`."
-  />
-  <VPFeature
-    title="Local Explorer Restrictions"
-    details="Current panel logic restricts `debug` and `tasks` in Local Explorer mode."
-  />
-  <VPFeature
-    title="Workspace Data Persistence"
-    details="Workspace metadata and AI/chat/tool data may be persisted in workspace `.nimote` paths by workflow."
-  />
-</VPFeatures>
-</div>
+### Agent Execution System
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Tool Registry** | Built-in and user-defined tools | File operations, terminal commands, Git operations, custom tools | Free |
+| **Secure Tool Execution** | Validation and safety checks | Path validation, command whitelisting, concurrent locking | Free |
+| **Error Handling** | Robust error recovery | Retry policies, fallback mechanisms, self-correction | Free |
+| **Observability** | Execution tracing and logging | Step-by-step visibility, performance metrics, audit trail | Free |
+| **Reflection Engine** | Self-assessment and improvement | Outcome evaluation, strategy adaptation, learning from mistakes | Free |
+
+### Project Indexing
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Workspace Understanding** | Project structure analysis | File type detection, dependency graph, build system identification | Free |
+| **User Tools** | Custom workflow automation | Tool templates, parameter configuration, reuse across sessions | Free |
+| **Chat History** | Persistent conversation storage | Workspace-scoped history, searchable archives | Free |
+
+---
+
+## Tasks & Timeline
+
+### Tasks Panel
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Task Grouping** | Organized task collections | Folder-based organization, drag & drop reordering | Free |
+| **Remote Execution** | Run commands on SSH servers | Working directory selection, environment variables | Free |
+| **State Tracking** | Real-time task status | Pending/Running/Success/Failed states, progress indication | Free |
+| **Output Capture** | Command output streaming | Live updates, log retention, error highlighting | Free |
+
+### Timeline Panel
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Event Ingestion** | Comprehensive event capture | Debug, LSP, terminal, Git, AI, user edit events | Free |
+| **Trace Building** | Causal event chaining | Event correlation, timeline construction, session scoping | Free |
+| **Filtering** | Source and severity filters | Multi-select filtering, search, temporal ranges | Free |
+| **Trace Persistence** | Automatic saving to .nimote | JSON storage, auto-save interval, max 50 traces | Free |
+| **Export Capabilities** | Trace sharing and handoffs | JSON export, summary generation, incident reporting | Free |
+
+### Timeline AI
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Root Cause Analysis** | AI-powered problem diagnosis | Pattern recognition, causal inference, error correlation | Free |
+| **Fix Suggestions** | Actionable recommendations | Context-aware suggestions, code snippets, step-by-step guidance | Free |
+| **Auto-Analysis** | Triggered on errors | Debounced analysis, background processing, status notifications | Free |
+
+---
+
+## Sync / Cache (Pro)
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Bidirectional Sync** | Local ↔ Remote transfer | Direction selection, file comparison, conflict detection | Pro |
+| **Path Safety** | Target path constraints | Whitelist validation, parent directory checks, dry-run preview | Pro |
+| **Operation History** | Sync activity log | Timestamped records, status tracking, retry capability | Pro |
+| **Selective Sync** | File and folder selection | Include/exclude patterns, size filters, modification time | Pro |
+
+---
+
+## Settings & Account
+
+### Application Settings
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Theme System** | Light/Dark/System themes | Material Design 3, dynamic color, OLED optimization | Free |
+| **Multi-Language** | 6+ language support | English, 中文, 日本語, 한국어, Русский, Español | Free |
+| **Editor Typography** | Font and spacing controls | Font family, size, line height, word wrap | Free |
+| **Keyboard Behavior** | Input method optimization | Soft keyboard tuning, hardware keyboard support, key mapping | Free |
+
+### Account & Subscription
+
+| Feature | Description | Technical Details | Availability |
+|---------|-------------|-------------------|-------------|
+| **Authentication** | Multiple sign-in methods | Email/password, Google Sign-In, Apple Sign-In | Free |
+| **Anonymous Upgrade** | Guest to account conversion | Data migration, seamless transition | Free |
+| **Entitlement Check** | Pro status verification | Subscription validation, trial tracking, grace period | Free |
+| **Purchase Restore** | Subscription recovery | App Store/Google Play integration, receipt validation | Free |
+
+---
+
+## Pro Gating & Limitations
+
+### Current Pro-Locked Features
+
+| Panel | Status | Notes |
+|-------|--------|-------|
+| `sourceControl` | 🔒 Pro | Git workflow, diffs, commits, Git AI |
+| `lsp` | 🔒 Pro | Diagnostics, code actions, language servers |
+| `debug` | 🔒 Pro | Breakpoints, call stack, variables, watch |
+| `syncCache` | 🔒 Pro | Local↔Remote sync, transfer operations |
+
+### Mode Restrictions
+
+| Feature | Local Mode | SSH Mode |
+|---------|-----------|----------|
+| File Explorer | ✅ | ✅ |
+| Terminal | ✅ | ✅ |
+| Source Control | ✅ (Pro) | ✅ (Pro) |
+| LSP | ✅ (Pro) | ✅ (Pro) |
+| Debug | ❌ | ✅ (Pro) |
+| Tasks | ❌ | ✅ |
+| Timeline | ✅ | ✅ |
+| AI Chat/Agent | ✅ | ✅ |
+| Sync/Cache | ✅ (Pro) | ✅ (Pro) |
+
+### Data Persistence
+
+| Data Type | Location | Scope |
+|-----------|----------|-------|
+| Workspace Metadata | `.nimote/index.json` | Per workspace |
+| Chat Histories | `.nimote/chat_histories/` | Per workspace |
+| Agent Histories | `.nimote/agent_histories/` | Per workspace |
+| Timeline Traces | `.nimote/timeline/` | Per workspace |
+| SSH Profiles | App Storage | Global |
+| AI Config | Secure Storage | Global |
+
+---
+
+## Explore More
+
+- [Quick Start Guide](/docs/quick-start)
+- [SSH Workspace Setup](/docs/ssh)
+- [Source Control Workflow](/docs/source-control)
+- [AI Assistant](/docs/ai)
+- [Timeline Panel](/docs/timeline)

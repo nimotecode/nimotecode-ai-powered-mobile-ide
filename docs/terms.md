@@ -1,3 +1,7 @@
+---
+title: Terms of Service | NimoteCode
+---
+
 # Terms of Service
 
 **Effective Date:** April 16, 2026

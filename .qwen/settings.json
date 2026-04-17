@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir *)",
+      "Read(//home2/nimotecode/lib/**)",
+      "Bash(npm run *)",
+      "Bash(python3 *)",
+      "Bash(cp *)"
+    ]
+  },
+  "$version": 3
+}

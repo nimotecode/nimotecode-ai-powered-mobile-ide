@@ -1,3 +1,7 @@
+---
+title: Privacy Policy | NimoteCode
+---
+
 # Privacy Policy
 
 **Effective Date:** April 16, 2026

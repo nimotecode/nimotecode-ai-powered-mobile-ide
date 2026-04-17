@@ -1,3 +1,7 @@
+---
+title: 简介 | NimoteCode
+---
+
 # 简介
 
 NimoteCode 是一款移动优先 IDE，让你在手机或平板上完成开发、调试与交付。

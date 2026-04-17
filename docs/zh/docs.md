@@ -1,3 +1,7 @@
+---
+title: 文档 | NimoteCode
+---
+
 # 文档
 
 这里是 NimoteCode 的产品文档总入口。

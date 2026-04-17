@@ -1,3 +1,7 @@
+---
+title: 功能特性 | NimoteCode
+---
+
 # 功能特性
 
 <div class="feature-hero">
@@ -6,270 +10,251 @@
   <p class="feature-lead">从 SSH 接入到最终提交，NimoteCode 将编码、诊断、自动化与发布能力整合在一个高效移动工作流中。</p>
 </div>
 
-<div class="feature-kpis">
-  <div class="feature-kpi">
-    <p class="kpi-value">10+</p>
-    <p class="kpi-label">核心面板能力</p>
-  </div>
-  <div class="feature-kpi">
-    <p class="kpi-value">2 模式</p>
-    <p class="kpi-label">本地 + SSH 工作区</p>
-  </div>
-  <div class="feature-kpi">
-    <p class="kpi-value">Pro</p>
-    <p class="kpi-label">LSP / Debug / Sync / Source Control</p>
-  </div>
-  <div class="feature-kpi">
-    <p class="kpi-value">全链路</p>
-    <p class="kpi-label">编辑、执行、分析、交付</p>
-  </div>
-</div>
+## 概览
 
-## 功能汇总面板
+| 类别 | 能力 | 可用性 |
+|------|------|--------|
+| **工作区与文件管理** | 本地和 SSH 工作区、文件浏览器、SSH 配置、自动重连 | 免费 |
+| **终端** | 多标签、持久化、搜索、输出解析 | 免费 |
+| **Source Control** | Git 工作流、差异、提交、分支、暂存、Git AI | Pro |
+| **LSP 与 Debug** | 诊断、代码动作、断点、调用栈、变量 | Pro |
+| **AI 与自动化** | AI Chat、AI Agent、记忆系统、提供商模板 | 免费 |
+| **Tasks 与 Timeline** | 任务运行器、时间线追踪、因果分析、AI 诊断 | 免费 |
+| **Sync / Cache** | 本地↔远程同步、路径安全、操作历史 | Pro |
+| **设置与账户** | 主题、语言、键盘、身份验证、订阅 | 免费 |
 
-<p class="feature-section-note">先看全局能力，再进入各模块细节。</p>
+---
 
-<div class="feature-grid feature-grid-primary">
-<VPFeatures>
-  <VPFeature
-    title="远程工作区"
-    details="连接 SSH 工作区，管理服务器配置档，在移动端直接处理真实远程项目。文档：/zh/docs/ssh"
-  />
-  <VPFeature
-    title="终端与命令"
-    details="在多标签终端执行 build/test/deploy，并通过输出搜索快速定位关键日志。文档：/zh/docs/terminal"
-  />
-  <VPFeature
-    title="Source Control"
-    details="应用内完成 Git 全流程：差异审查、干净提交、分支同步，并用 Git AI 降低交付风险。文档：/zh/docs/source-control"
-  />
-  <VPFeature
-    title="LSP 与 Debug（Pro）"
-    details="先用诊断与代码动作收敛问题，再用断点、调用栈、变量与 Watch 精准定位。文档：/zh/docs/lsp、/zh/docs/debug"
-  />
-  <VPFeature
-    title="AI 工作流"
-    details="按团队偏好接入 AI 提供商，结合 AI Chat 与 AI Agent 完成分析、重构与自动化。文档：/zh/docs/ai"
-  />
-  <VPFeature
-    title="Tasks 与 Timeline"
-    details="将重复命令标准化执行，并把运行事件转为可行动的根因 Trace 与修复建议。文档：/zh/docs/tasks、/zh/docs/timeline"
-  />
-  <VPFeature
-    title="Sync / Cache（Pro）"
-    details="在本地与远程间安全传输项目内容，具备方向控制、路径约束与历史记录。文档：/zh/docs/sync-cache"
-  />
-  <VPFeature
-    title="账户与订阅"
-    details="登录、试用与订阅状态校验、恢复购买，保障 Pro 工作流连续可用。"
-  />
-  <VPFeature
-    title="设置与键盘"
-    details="主题、语言、编辑器排版、软键盘与键盘行为均可调优，适合长时移动开发。文档：/zh/docs/settings"
-  />
-  <VPFeature
-    title="通知"
-    details="通过应用内通知及时掌握关键流程状态与更新信息。"
-  />
-</VPFeatures>
-</div>
+## 工作区与连接
 
-## 核心工作区
+### 核心工作区功能
 
-<p class="feature-section-note">稳定接入与低摩擦文件操作，是后续所有流程的基础。</p>
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **双工作区模式** | 支持本地文件系统和远程 SSH 工作区 | 本地：设备存储访问；SSH：安全远程连接 | 免费 |
+| **SSH 连接配置** | 保存和管理多个服务器配置 | 通过 Hive 持久存储，自动恢复上次工作区 | 免费 |
+| **心跳检测** | 持续的连接健康检查 | 30 秒保活间隔，前后台感知 | 免费 |
+| **自动重连** | 从网络故障中自动恢复 | 有状态重连，终端会话恢复 | 免费 |
+| **应用生命周期感知** | 基于应用状态的智能连接管理 | 后台暂停监控，恢复时验证 | 免费 |
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="资源管理与文件操作"
-    details="快速创建、移动、重命名与编辑文件，并保持与编辑器定位联动。"
-  />
-  <VPFeature
-    title="SSH 连接配置"
-    details="为 Staging、Production 等环境复用连接配置档，提升切换效率。"
-  />
-  <VPFeature
-    title="编辑器与面板协同"
-    details="在代码、诊断、调试与任务面板间高效切换，减少上下文丢失。"
-  />
-</VPFeatures>
-</div>
+### 文件操作
 
-## 终端
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **文件浏览器** | 基于树的导航，与编辑器集成 | 本地和远程（SFTP）文件系统提供程序 | 免费 |
+| **文件操作** | 创建、移动、重命名、删除文件和目录 | 带错误处理的原子操作 | 免费 |
+| **编辑器集成** | 浏览器和编辑器之间的无缝导航 | 文件路径跟踪、快速打开、最近文件 | 免费 |
 
-<p class="feature-section-note">构建、测试、部署与故障响应都围绕终端高频发生。</p>
+---
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="多终端工作流"
-    details="将构建、测试、部署、日志拆分到不同终端标签并发执行。"
-  />
-  <VPFeature
-    title="命令执行与输出"
-    details="实时查看命令输出，在排障期间保留高价值日志上下文。"
-  />
-  <VPFeature
-    title="搜索与定位"
-    details="在长输出中快速搜索失败点，直接进入下一步处理动作。"
-  />
-</VPFeatures>
-</div>
+## 终端与命令执行
+
+### 终端能力
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **多标签终端** | 并发终端会话 | 独立通道管理，会话切换 | 免费 |
+| **终端持久化** | 重连后会话恢复 | 工作目录保留，Shell 状态恢复 | 免费 |
+| **实时输出** | 命令输出的实时流 | 伪终端仿真，ANSI 颜色支持 | 免费 |
+| **输出搜索** | 快速搜索终端历史 | 关键字匹配，增量搜索 | 免费 |
+| **终端输出解析** | 自动提取错误和警告 | 基于 Rust 的解析器，错误/警告检测，退出码分析 | 免费 |
+
+---
 
 ## Source Control（Pro）
 
-<p class="feature-section-note">通过应用内 Git + AI 辅助，提高提交质量与交付可控性。</p>
+### Git 工作流
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="变更管理"
-    details="精准查看已暂存、未暂存与冲突改动，按文件粒度控制交付内容。"
-  />
-  <VPFeature
-    title="提交与同步"
-    details="在同一移动流程内完成 commit、pull/push/fetch，减少切换成本。"
-  />
-  <VPFeature
-    title="分支与 Stash"
-    details="在应用内完成分支切换、集成与 stash 生命周期管理。"
-  />
-  <VPFeature
-    title="历史与差异"
-    details="通过提交/文件/行级历史与 diff 视图做更稳妥的改动决策。"
-  />
-  <VPFeature
-    title="Git AI"
-    details="生成更清晰提交信息、解释改动逻辑并提前识别潜在风险。"
-  />
-</VPFeatures>
-</div>
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **变更管理** | 已暂存/未暂存/有冲突的变更视图 | 文件级粒度，每个文件的差异预览 | Pro |
+| **提交与同步** | 应用内完整的 Git 操作 | 提交、拉取、推送、获取、变基支持 | Pro |
+| **分支管理** | 分支创建、切换、删除 | 本地和远程分支列表、检出 | Pro |
+| **暂存操作** | 暂存和应用变更 | 暂存列表、应用、丢弃、弹出操作 | Pro |
+| **历史与差异** | 提交历史和文件差异 | 行级差异显示，追溯注解 | Pro |
+
+### Git AI 集成
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **AI 提交信息** | 生成高质量提交信息 | 差异分析、语义理解、多个建议 | Pro |
+| **变更解释** | AI 驱动的修改解释 | 上下文感知分析、影响评估 | Pro |
+| **风险检测** | 识别潜在有问题的变更 | 模式识别、反模式检测 | Pro |
+
+---
 
 ## LSP 与 Debug（Pro）
 
-<p class="feature-section-note">诊断先收敛，调试再验证，显著缩短问题处理路径。</p>
+### 语言服务器协议
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="LSP 诊断"
-    details="集中查看错误与警告，按严重级别筛选并一键跳转代码位置。"
-  />
-  <VPFeature
-    title="LSP 代码动作"
-    details="快速应用可用修复并刷新诊断结果，缩短问题处理周期。"
-  />
-  <VPFeature
-    title="LSP 安装向导"
-    details="通过检测/安装/复检流程，完成支持语言服务能力准备。"
-  />
-  <VPFeature
-    title="调试运行控制"
-    details="使用暂停/继续/单步控制检查运行状态，定位复杂行为异常。"
-  />
-  <VPFeature
-    title="调试检查面板"
-    details="在一处查看断点、线程、调用栈、变量、Watch 与调试输出。"
-  />
-  <VPFeature
-    title="详细文档"
-    details="LSP 文档：/zh/docs/lsp；Debug 文档：/zh/docs/debug"
-  />
-</VPFeatures>
-</div>
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **诊断面板** | 实时错误和警告显示 | 严重级别筛选（错误/警告/信息/提示）、文件分组 | Pro |
+| **代码动作** | 快速修复和重构建议 | LSP codeAction 提供程序、一键应用 | Pro |
+| **LSP 安装向导** | 引导式语言服务器设置 | 自动检测、安装、验证流程 | Pro |
+| **转到定义** | 符号导航 | LSP 定义提供程序、预览支持 | Pro |
+| **查找引用** | 查找符号的所有引用 | LSP 引用提供程序、用法列表 | Pro |
+
+### 调试器
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **运行时控制** | 暂停、继续、单步操作 | 单步跳过、单步进入、单步跳出、重启 | Pro |
+| **断点** | 带条件的行断点 | 断点管理、命中计数、条件断点 | Pro |
+| **调用栈** | 堆栈跟踪导航 | 帧切换、异步堆栈跟踪 | Pro |
+| **变量面板** | 检查和修改变量 | 作用域分组、值编辑、监视表达式 | Pro |
+| **监视表达式** | 自定义表达式求值 | 实时更新、格式化输出 | Pro |
+| **调试控制台** | REPL 和表达式求值 | 命令执行、输出显示 | Pro |
+
+---
 
 ## AI 与自动化
 
-<p class="feature-section-note">简单问题即时回答，复杂任务分步骤执行，效率和可控性兼顾。</p>
+### AI Chat 与 Agent
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="AI Chat 与 Agent"
-    details="简单问题用对话快速解决，复杂任务交给分步骤 Agent 执行。"
-  />
-  <VPFeature
-    title="提供商模板"
-    details="可用内置模板或自定义 OpenAI 兼容端点，匹配你的团队技术栈。"
-  />
-  <VPFeature
-    title="高级模型参数"
-    details="通过模型参数、上下文与流式选项平衡质量、速度与成本。"
-  />
-  <VPFeature
-    title="用户工具与历史"
-    details="加载工作区用户工具并保留 chat/agent 历史，形成可复用流程资产。"
-  />
-</VPFeatures>
-</div>
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **双 AI 模式** | 聊天用于问答，Agent 用于自动化 | 基于意图的路由、任务复杂度评估 | 免费 |
+| **提供商模板** | 预配置的 AI 提供商 | OpenAI、Anthropic、自定义 OpenAI 兼容端点 | 免费 |
+| **安全凭证存储** | 安全的 API 密钥管理 | 加密存储、钥匙串集成 | 免费 |
+| **高级模型配置** | 细粒度模型参数 | 温度、最大令牌数、top-p、流式选项 | 免费 |
 
-## Tasks、Timeline 与 Sync
+### 记忆系统
 
-<p class="feature-section-note">将重复操作、事件分析与项目传输统一到可追踪流程里。</p>
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **短期记忆** | 当前会话上下文 | 消息队列、最多 100 条消息、元数据跟踪 | 免费 |
+| **长期记忆** | 持久化知识存储 | 记忆项索引、基于标签的组织、最多 1000 项 | 免费 |
+| **智能压缩** | 多种压缩策略 | 摘要、滑动窗口、基于重要性、混合模式 | 免费 |
+| **Token 预算管理** | 上下文窗口优化 | Token 计数、预算分配、自动压缩触发 | 免费 |
+| **相似度检索** | 相关记忆搜索 | 关键字匹配、标签筛选、重要性评分 | 免费 |
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="Tasks 面板"
-    details="按分组执行远程任务并跟踪状态，让团队重复操作标准化。文档：/zh/docs/tasks"
-  />
-  <VPFeature
-    title="Timeline 面板"
-    details="将事件流转为 Trace 诊断，通过来源/严重级别筛选快速收敛问题。文档：/zh/docs/timeline"
-  />
-  <VPFeature
-    title="Causal Timeline AI"
-    details="通过 issue/session 流程和 AI 分析导出，加速复杂问题交接与协同。"
-  />
-  <VPFeature
-    title="Sync / Cache 面板（Pro）"
-    details="支持 local->remote 同步与 remote->local 缓存，具备路径约束与历史回溯。文档：/zh/docs/sync-cache"
-  />
-</VPFeatures>
-</div>
+### Agent 执行系统
 
-## 设置、账户与订阅
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **工具注册表** | 内置和用户定义的工具 | 文件操作、终端命令、Git 操作、自定义工具 | 免费 |
+| **安全工具执行** | 验证和安全检查 | 路径验证、命令白名单、并发锁定 | 免费 |
+| **错误处理** | 强大的错误恢复 | 重试策略、回退机制、自我修正 | 免费 |
+| **可观测性** | 执行追踪和日志记录 | 逐步可见性、性能指标、审计跟踪 | 免费 |
+| **反思引擎** | 自我评估和改进 | 结果评估、策略适应、从错误中学习 | 免费 |
 
-<p class="feature-section-note">保障身份与权益连续性，同时优化长时间移动端开发体验。</p>
+### 项目索引
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="认证"
-    details="支持邮箱密码与 Google 登录，并支持匿名用户升级绑定流程。"
-  />
-  <VPFeature
-    title="订阅与试用"
-    details="可查看权益状态、刷新校验并恢复购买，保障付费能力稳定可用。"
-  />
-  <VPFeature
-    title="设置系统"
-    details="统一管理主题、语言、编辑器排版与输入偏好，提升日常开发舒适度。"
-  />
-  <VPFeature
-    title="通知"
-    details="及时获取流程相关通知和状态更新。"
-  />
-</VPFeatures>
-</div>
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **工作区理解** | 项目结构分析 | 文件类型检测、依赖图、构建系统识别 | 免费 |
+| **用户工具** | 自定义工作流自动化 | 工具模板、参数配置、跨会话复用 | 免费 |
+| **聊天历史** | 持久化对话存储 | 工作区范围的历史、可搜索档案 | 免费 |
 
-## Pro 与模式说明
+---
 
-<p class="feature-section-note">当前门控边界与模式限制，帮助你规划可用路径。</p>
+## Tasks 与 Timeline
 
-<div class="feature-grid">
-<VPFeatures>
-  <VPFeature
-    title="当前 Pro 门控面板"
-    details="`sourceControl`、`lsp`、`debug`、`syncCache`。"
-  />
-  <VPFeature
-    title="Local Explorer 限制"
-    details="当前逻辑会在 Local Explorer 模式下限制 `debug` 与 `tasks`。"
-  />
-  <VPFeature
-    title="工作区数据持久化"
-    details="工作区元数据及 AI/chat/tool 数据会按工作流写入工作区 `.nimote` 路径。"
-  />
-</VPFeatures>
-</div>
+### Tasks 面板
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **任务分组** | 有组织的任务集合 | 基于文件夹的组织、拖放重排序 | 免费 |
+| **远程执行** | 在 SSH 服务器上运行命令 | 工作目录选择、环境变量 | 免费 |
+| **状态跟踪** | 实时任务状态 | 待处理/运行中/成功/失败状态、进度指示 | 免费 |
+| **输出捕获** | 命令输出流 | 实时更新、日志保留、错误高亮 | 免费 |
+
+### Timeline 面板
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **事件摄入** | 全面的事件捕获 | 调试、LSP、终端、Git、AI、用户编辑事件 | 免费 |
+| **追踪构建** | 因果事件链 | 事件关联、时间线构建、会话范围 | 免费 |
+| **筛选** | 来源和严重级别筛选 | 多选筛选、搜索、时间范围 | 免费 |
+| **追踪持久化** | 自动保存到 .nimote | JSON 存储、自动保存间隔、最多 50 个追踪 | 免费 |
+| **导出能力** | 追踪共享和交接 | JSON 导出、摘要生成、事件报告 | 免费 |
+
+### Timeline AI
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **根因分析** | AI 驱动的问题诊断 | 模式识别、因果推断、错误关联 | 免费 |
+| **修复建议** | 可行动的建议 | 上下文感知建议、代码片段、分步指导 | 免费 |
+| **自动分析** | 错误时触发 | 防抖分析、后台处理、状态通知 | 免费 |
+
+---
+
+## Sync / Cache（Pro）
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **双向同步** | 本地 ↔ 远程传输 | 方向选择、文件比较、冲突检测 | Pro |
+| **路径安全** | 目标路径约束 | 白名单验证、父目录检查、试运行预览 | Pro |
+| **操作历史** | 同步活动日志 | 时间戳记录、状态跟踪、重试能力 | Pro |
+| **选择性同步** | 文件和文件夹选择 | 包含/排除模式、大小筛选、修改时间 | Pro |
+
+---
+
+## 设置与账户
+
+### 应用设置
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **主题系统** | 浅色/深色/系统主题 | Material Design 3、动态颜色、OLED 优化 | 免费 |
+| **多语言** | 6+ 语言支持 | English、中文、日本語、한국어、Русский、Español | 免费 |
+| **编辑器排版** | 字体和间距控制 | 字体系列、大小、行高、自动换行 | 免费 |
+| **键盘行为** | 输入法优化 | 软键盘调整、硬键盘支持、键映射 | 免费 |
+
+### 账户与订阅
+
+| 功能 | 描述 | 技术细节 | 可用性 |
+|------|------|----------|--------|
+| **身份验证** | 多种登录方式 | 邮箱/密码、Google 登录、Apple 登录 | 免费 |
+| **匿名升级** | 访客到账户转换 | 数据迁移、无缝过渡 | 免费 |
+| **权益检查** | Pro 状态验证 | 订阅验证、试用跟踪、宽限期 | 免费 |
+| **购买恢复** | 订阅恢复 | App Store/Google Play 集成、收据验证 | 免费 |
+
+---
+
+## Pro 门控与限制
+
+### 当前 Pro 锁定功能
+
+| 面板 | 状态 | 说明 |
+|------|------|------|
+| `sourceControl` | 🔒 Pro | Git 工作流、差异、提交、Git AI |
+| `lsp` | 🔒 Pro | 诊断、代码动作、语言服务器 |
+| `debug` | 🔒 Pro | 断点、调用栈、变量、监视 |
+| `syncCache` | 🔒 Pro | 本地↔远程同步、传输操作 |
+
+### 模式限制
+
+| 功能 | 本地模式 | SSH 模式 |
+|------|---------|---------|
+| 文件浏览器 | ✅ | ✅ |
+| 终端 | ✅ | ✅ |
+| Source Control | ✅ (Pro) | ✅ (Pro) |
+| LSP | ✅ (Pro) | ✅ (Pro) |
+| Debug | ❌ | ✅ (Pro) |
+| Tasks | ❌ | ✅ |
+| Timeline | ✅ | ✅ |
+| AI Chat/Agent | ✅ | ✅ |
+| Sync/Cache | ✅ (Pro) | ✅ (Pro) |
+
+### 数据持久化
+
+| 数据类型 | 位置 | 范围 |
+|---------|------|------|
+| 工作区元数据 | `.nimote/index.json` | 每个工作区 |
+| 聊天历史 | `.nimote/chat_histories/` | 每个工作区 |
+| Agent 历史 | `.nimote/agent_histories/` | 每个工作区 |
+| Timeline 追踪 | `.nimote/timeline/` | 每个工作区 |
+| SSH 配置 | 应用存储 | 全局 |
+| AI 配置 | 安全存储 | 全局 |
+
+---
+
+## 探索更多
+
+- [快速入门指南](/zh/docs/quick-start)
+- [SSH 工作区设置](/zh/docs/ssh)
+- [Source Control 工作流](/zh/docs/source-control)
+- [AI 助手](/zh/docs/ai)
+- [Timeline 面板](/zh/docs/timeline)

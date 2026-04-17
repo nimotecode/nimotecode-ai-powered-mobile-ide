@@ -1,3 +1,7 @@
+---
+title: Account Deletion | NimoteCode
+---
+
 # Account Deletion
 
 **Last Updated:** April 16, 2026
